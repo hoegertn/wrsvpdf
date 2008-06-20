@@ -1,0 +1,1 @@
+start javaw -Djava.library.path=.\lib -jar com.hoegernet.wrsvpdf.jar 

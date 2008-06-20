@@ -1,0 +1,8 @@
+[build:2.0.1_2008-00-06]
+- exit button to close application
+- saves staffel filename between panels 
+
+[build:2.0.0_2008-01-21]
+first binary build
+- new implemented with Java & SWT
+- JasperReports for Reporting

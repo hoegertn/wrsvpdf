@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Packaging Generator" default="dev" basedir="../">
+
+  <property name="target" value="../~wrsvpdf" />
+  <property name="loggingInstall" value="C:/DevelopmentTools/commons-logging-1.1.1" />
+  <property name="package" value="${target}/package" />
+
+<!-- Java-Quelltext -->
+  <fileset id="JavaQuelltext" dir="./src">
+    <include name="**/*.java" />
+  </fileset>
+
+<!-- Java-Quelltext -->
+  <fileset id="JavaBinary" dir="${target}/bin">
+    <include name="**/*.class" />
+  </fileset>
+
+  <path id="LibPath">
+    <pathelement location="./lib" />
+    <pathelement location="${loggingInstall}/commons-logging.jar" />
+  </path>
+
+
+  <target name="dev" description="Development Build">
+    <antcall target="-clean" />
+    <antcall target="-prepare" />
+    <antcall target="-compileAndJar" />
+  </target>
+
+  <target name="int" description="Integration Build">
+  
+    <!-- Installationsdatei erstellen -->
+    <getbuildnr buildnrproperty="build.number" />
+    
+    
+    <antcall target="-clean" />
+    <antcall target="-prepare" />
+    <antcall target="-compileAndJar" />
+    <antcall target="-javadoc" />
+    <antcall target="-package" />
+  </target>
+
+
+  <!-- MAKRO: Build-Nummer aus Changeset-Revision ermitteln -->
+  <macrodef name="getbuildnr">
+    <attribute name="buildnrproperty" />
+    <sequential>
+      <exec executable="svn" output="~getbuildnr.xml">
+        <arg value="info" />
+        <arg value="--xml" />
+      </exec>
+      <xmlproperty file="~getbuildnr.xml" collapseAttributes="true" />
+      <property name="@{buildnrproperty}" value="${info.entry.commit.revision}" />
+      <echo message="Verwende Build-Nummer: ${info.entry.commit.revision}" />
+      <delete file="~getbuildnr.xml" />
+    </sequential>
+
+  </macrodef>
+      
+
+<!-- ==== Vorbereitung ==== -->
+  <target name="-prepare" description="Vorbereitung und Initialisierung">
+    <mkdir dir="${target}/bin" />
+    <mkdir dir="${target}/src" />
+    <mkdir dir="${target}/jar" />
+    <mkdir dir="${target}/javadoc" />
+    
+    <mkdir dir="${package}/docs" />
+    <mkdir dir="${package}/docs/javadoc" />
+    <mkdir dir="${package}/config" />
+    <mkdir dir="${package}/demo" />
+    <mkdir dir="${package}/lib" />
+    <mkdir dir="${package}/images" />
+    <mkdir dir="${package}/reports" />
+
+    <record name="${target}/build.log" />
+    
+  </target>
+  
+  <target name="-clean" description="Entfernt alle generierten Dateien und Verzeichnisse">
+    <delete dir="${target}" />
+  </target>
+
+  <target name="-copySrc" description="Vorbereitung und Initialisierung">
+  
+    <copy todir="${target}/src">
+      <fileset dir="${basedir}/src">
+        <include name="**/*.*" />
+      </fileset>
+      <filterset>
+	<filter token="SVN" value="${buildNr}" />
+      </filterset>
+    </copy>
+    
+  </target>
+
+
+    <!-- ==== Installationsdatei erstellen ==== -->
+  <target name="-compileAndJar" depends="clean, prepare" description="Erstellt die Development Builds">
+
+    
+    <javac srcdir="./src" destdir="${target}/bin" debug="true" debuglevel="lines,vars,source">
+      <classpath refid="LibPath" />
+    </javac>
+
+    <jar destfile="${target}/jar/com.hoegernet.wrsvpdf.jar" manifest="./config/MANIFEST.MF">
+      <fileset refid="JavaBinary" />
+      <fileset refid="JavaQuelltext" />
+    </jar>
+    
+  </target>
+
+  <target name="-javadoc" description="Erstellt das Javadoc">
+    <javadoc destdir="${target}/javadoc">
+      <fileset refid="JavaQuelltext" />
+      <classpath>
+        <path refid="LibPath" />
+      </classpath>
+    </javadoc>
+  </target>
+
+  <target name="-package" description="package">
+
+    <copy todir="${package}">
+      <fileset dir="${target}/jar" includes="**.*" />	
+	</copy>	
+
+        <copy todir="${package}/docs">
+		<fileset dir="./docs" includes="**.*" />	
+	</copy>	
+        <copy todir="${package}/docs/javadoc">
+		<fileset dir="${target}/javadoc" includes="**.*" />	
+	</copy>	
+	<copy todir="${package}">
+		<fileset dir="./config" includes="**.*" />	
+	</copy>	
+	<copy todir="${package}/demo">
+		<fileset dir="./demo" includes="**.*" />	
+	</copy>	
+	<copy todir="${package}/lib">
+		<fileset dir="./lib" includes="**.*" />	
+	</copy>	
+	<copy todir="${package}/images">
+		<fileset dir="./images" includes="**.*" />	
+	</copy>	
+	<copy todir="${package}/reports">
+		<fileset dir="./reports" includes="**.*" />	
+	</copy>	
+</target>
+</project>

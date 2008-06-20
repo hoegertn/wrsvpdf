@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.hoegernet.wrsvpdf.Starter
+Class-Path: lib/com.hoegernet.swt_V1.0.jar lib/swt.jar lib/com.hoegernet.common.logger_V1.0.jar lib/hgnet_gui_V1.1.jar lib/hgnet_jaspertools_V1.1.jar lib/hgnet_utilities_V1.2.jar lib/JasperReportingLib.jar
+
