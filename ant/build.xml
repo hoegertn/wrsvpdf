@@ -127,25 +127,25 @@
 		</copy>
 
 		<copy todir="${package}/docs">
-			<fileset dir="${basedir}/docs" includes="**.*" />
+			<fileset dir="${basedir}/docs" includes="**/**.*" />
 		</copy>
 		<copy todir="${package}/docs/javadoc">
-			<fileset dir="${target}/javadoc" includes="**.*" />
+			<fileset dir="${target}/javadoc" includes="**/**.*" />
 		</copy>
 		<copy todir="${package}">
 			<fileset dir="${basedir}/config" includes="**.*" />
 		</copy>
 		<copy todir="${package}/demo">
-			<fileset dir="${basedir}/demo" includes="**.*" />
+			<fileset dir="${basedir}/demo" includes="**/**.*" />
 		</copy>
 		<copy todir="${package}/lib">
 			<fileset dir="${basedir}/lib" includes="**.*" />
 		</copy>
 		<copy todir="${package}/images">
-			<fileset dir="${basedir}/images" includes="**.*" />
+			<fileset dir="${basedir}/images" includes="**/**.*" />
 		</copy>
 		<copy todir="${package}/reports">
-			<fileset dir="${basedir}/reports" includes="**.*" />
+			<fileset dir="${basedir}/reports" includes="**/**.*" />
 		</copy>
 	</target>
 </project>
