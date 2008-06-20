@@ -18,7 +18,9 @@ public class IllegalArgumentException extends PdfGeneratorException {
 	private static final long serialVersionUID = 5790462224214115599L;
 
 	/**
-	 * @param message
+	 * Create new IllegalArgumentException.
+	 *
+	 * @param message - Exception description
 	 */
 	public IllegalArgumentException(String message) {
 		super(message);

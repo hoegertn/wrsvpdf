@@ -1,6 +1,7 @@
-[build:2.0.2_2008-06-21]
+[build:2.1.0_2008-06-21]
 - remove "Verbandsrunde"-tag
-- simple dayreport 
+- simple dayreport
+- some more comments
 
 [build:2.0.1_2008-03-06]
 - exit button to close application

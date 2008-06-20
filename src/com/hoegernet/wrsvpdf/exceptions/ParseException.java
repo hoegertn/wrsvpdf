@@ -18,15 +18,19 @@ public class ParseException extends PdfGeneratorException {
 	private static final long serialVersionUID = -6689964929519380647L;
 
 	/**
-	 * @param message
+	 * Create new ParseException.
+	 *
+	 * @param message - Exception description
 	 */
 	public ParseException(String message) {
 		super(message);
 	}
 
 	/**
-	 * @param message
-	 * @param cause
+	 * Create new ParseException.
+	 *
+	 * @param message - Exception description
+	 * @param cause - Root Cause of this exception
 	 */
 	public ParseException(String message, Throwable cause) {
 		super(message, cause);

@@ -9,6 +9,8 @@ import com.hoegernet.wrsvpdf.fileio.impl.FlatFileImport;
 import com.hoegernet.wrsvpdf.ui.MainFrame;
 
 /**
+ * Main Class for WRSV-PDF.<br>
+ *
  * Copyright 2007 Hoegernet IT Services
  * @author Thorsten Höger
  *

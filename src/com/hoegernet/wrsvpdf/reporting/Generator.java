@@ -33,6 +33,8 @@ import com.hoegernet.wrsvpdf.types.Verein;
 import com.hoegernet.wrsvpdf.types.WRSVPerson;
 
 /**
+ * This class generates PDF files
+ *
  * type: com.hoegernet.wrsvpdf->Generator
  *
  * @author Thorsten Hoeger created: 23.07.2007 file: Generator.java

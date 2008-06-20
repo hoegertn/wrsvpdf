@@ -18,8 +18,10 @@ public class FileIOException extends PdfGeneratorException {
 	private static final long serialVersionUID = -7708960040975991879L;
 
 	/**
-	 * @param message
-	 * @param cause
+	 * Create new FileIOException.
+	 *
+	 * @param message - Exception description
+	 * @param cause - Root Cause of this exception
 	 */
 	public FileIOException(String message, Throwable cause) {
 		super(message, cause);

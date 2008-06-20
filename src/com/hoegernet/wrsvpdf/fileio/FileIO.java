@@ -19,8 +19,10 @@ import com.hoegernet.wrsvpdf.exceptions.FileIOException;
 public class FileIO {
 
 	/**
-	 * @param filename
-	 * @return String[]
+	 * Read lines from file into a string array.
+	 *
+	 * @param filename - filename to be loaded from
+	 * @return String[] - String Array with lines of file
 	 * @throws FileIOException
 	 */
 	public static String[] getLinesFromFile(String filename) throws FileIOException {
@@ -42,8 +44,10 @@ public class FileIO {
 	}
 
 	/**
-	 * @param line
-	 * @return String[]
+	 * Read field from single line into string array.
+	 *
+	 * @param line - line to be parsed
+	 * @return String[] - String Array with fields
 	 */
 	public static String[] getFieldsFromLine(String line) {
 		String[] fields = line.split("\",\"");
@@ -58,8 +62,11 @@ public class FileIO {
 	}
 
 	/**
-	 * @param line
-	 * @return Fields
+	 * Read field from single line into string array.
+	 * same as getFieldsFromLine but doesn't expect quotes around fields
+	 *
+	 * @param line - line to be parsed
+	 * @return String[] - String Array with fields
 	 */
 	public static String[] getFieldsFromLineWithoutQuotes(String line) {
 		String[] fields = line.split(",");
@@ -74,8 +81,10 @@ public class FileIO {
 	}
 
 	/**
-	 * @param s
-	 * @return String without "
+	 * Removes leading and trailing quotes.
+	 *
+	 * @param s - string to clean
+	 * @return String without quote
 	 */
 	public static String cleanQuotes(String s) {
 		String ret = s;
@@ -90,8 +99,10 @@ public class FileIO {
 	}
 
 	/**
-	 * @param line
-	 * @return Spiel
+	 * Parse Single game from line
+	 *
+	 * @param line - line to be parsed
+	 * @return String Array containing detailed Info about Game
 	 */
 	public static String[] getSpielFromLine(String line) {
 		int dot = line.indexOf(".");

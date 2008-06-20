@@ -19,6 +19,8 @@ import com.hoegernet.wrsvpdf.types.Verein;
 import com.hoegernet.wrsvpdf.types.WRSVPerson;
 
 /**
+ * This class is not longer used
+ *
  * type: com.hoegernet.wrsvpdf->FileOutput
  *
  * @author Thorsten Hoeger

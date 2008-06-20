@@ -4,6 +4,8 @@
 package com.hoegernet.wrsvpdf.fileio;
 
 /**
+ * This class manages the import/export Implementations
+ *
  * Copyright 2007 Hoegernet IT Services
  * @author Thorsten Höger
  *
@@ -21,7 +23,8 @@ public class FileIORegistry {
 	private static FileIORegistry instance = null;
 
 	/**
-	 * get singelton instance
+	 * Get singelton instance
+	 *
 	 * @return instance
 	 */
 	public static FileIORegistry getInstance() {

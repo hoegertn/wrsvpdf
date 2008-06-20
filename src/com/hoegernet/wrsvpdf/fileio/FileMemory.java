@@ -1,6 +1,8 @@
 package com.hoegernet.wrsvpdf.fileio;
 
 /**
+ * This class saves the staffel-File for use in different panels
+ *
  * Copyright 2008 Hoegernet IT Services
  * @author Thorsten Höger
  *

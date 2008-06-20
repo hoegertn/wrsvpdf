@@ -5,6 +5,8 @@ import java.io.File;
 import com.hoegernet.common.logger.ELogLevel;
 
 /**
+ * This File provides version information.<br>
+ *
  * Copyright 2007 Hoegernet IT Services
  * @author Thorsten Höger
  *
@@ -19,11 +21,11 @@ public interface Configuration {
 	/**  */
 	public final static int VERSION_MAJOR = 2;
 	/**  */
-	public final static int VERSION_MINOR = 0;
+	public final static int VERSION_MINOR = 1;
 	/**  */
-	public final static int VERSION_REVISION = 1;
+	public final static int VERSION_REVISION = 0;
 	/**  */
-	public final static String VERSION_RELEASE_DATE = "2008-03-06";
+	public final static String VERSION_RELEASE_DATE = "2008-06-21";
 	/**  */
 	public final static String VERSION_SVN_REVISION = "@SVN@";
 	/**  */

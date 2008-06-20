@@ -18,6 +18,8 @@ import com.hoegernet.wrsvpdf.types.Verein;
 import com.hoegernet.wrsvpdf.types.WRSVPerson;
 
 /**
+ * This class imports flatfiles
+ *
  * type: com.hoegernet.wrsvpdf->FileImport
  *
  * @author Thorsten Hoeger
