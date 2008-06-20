@@ -72,7 +72,7 @@
     <mkdir dir="${package}/images" />
     <mkdir dir="${package}/reports" />
 
-    <record name="${target}/../build.log" />
+    <record name="c:/wrsv_build.log" />
     
   </target>
   
