@@ -12,7 +12,7 @@ package com.hoegernet.wrsvpdf.types;
  */
 public class Staffel {
 
-	private String jahr = "";
+	private String title = "";
 	private String name = "";
 	private String staffelleiter_name = "";
 	private String staffelleiter_strasse = "";
@@ -20,27 +20,30 @@ public class Staffel {
 	private String staffelleiter_telfax = "";
 	private String staffelleiter_mail = "";
 	private String regelungen = "";
-	
+
 	/**
-	 * 
+	 *
 	 */
 	public Staffel() {
 		// Auto-generated constructor stub
 	}
 
-	/**
-	 * @return the jahr
-	 */
-	public String getJahr() {
-		return this.jahr;
-	}
 
 	/**
-	 * @param jahr the jahr to set
+	 * @return the title
 	 */
-	public void setJahr(String jahr) {
-		this.jahr = jahr;
+	public String getTitle() {
+		return this.title;
 	}
+
+
+	/**
+	 * @param title the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 
 	/**
 	 * @return the name

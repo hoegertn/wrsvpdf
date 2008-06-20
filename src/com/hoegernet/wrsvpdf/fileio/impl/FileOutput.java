@@ -93,7 +93,7 @@ public class FileOutput implements IFileWriter {
 
 	public void writeSpieltagReport(Staffel staffel, Spieltag tag, String pdfFileName) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileOutput", "Writing Spieltag report to file: " + pdfFileName);
-		JasperPrint jp = Generator.createSpieltagReport(staffel, tag, null);
+		JasperPrint jp = Generator.createSpieltagReport(staffel, tag, null, false);
 		try {
 			JasperExportManager.exportReportToPdfFile(jp, pdfFileName);
 			Logger.getInstance().logInfo("FileOutput", "Writing DONE");

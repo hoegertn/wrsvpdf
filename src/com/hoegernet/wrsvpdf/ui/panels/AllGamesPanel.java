@@ -16,6 +16,7 @@ import org.eclipse.swt.widgets.Text;
 
 import com.hoegernet.swt.bricks.LabelBrick;
 import com.hoegernet.swt.bricks.TextFieldBrick;
+import com.hoegernet.swt.bricks.buttons.CheckBoxButtonBrick;
 import com.hoegernet.swt.bricks.buttons.DirSelectButtonBrick;
 import com.hoegernet.swt.bricks.buttons.FileSelectButtonBrick;
 import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
@@ -44,6 +45,8 @@ public class AllGamesPanel extends MainPanel {
 
 	private TextFieldBrick teamText;
 
+	private CheckBoxButtonBrick chkReport;
+
 	/**
 	 * @param parent
 	 * @param style
@@ -68,6 +71,10 @@ public class AllGamesPanel extends MainPanel {
 		this.gameText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new DirSelectButtonBrick(parent, this.gameText, "Ordner wählen");
 
+		new LabelBrick(parent, SWT.NONE, "Berichtsbogen?");
+		this.chkReport = new CheckBoxButtonBrick(parent, "");
+		new LabelBrick(parent, SWT.NONE, "");
+
 		new LabelBrick(parent, SWT.NONE, "PDF erstellen");
 		new DirGOButtonBrick(parent) {
 			@Override
@@ -89,7 +96,7 @@ public class AllGamesPanel extends MainPanel {
 
 					for (File tag : files) {
 						Spieltag game = FileIORegistry.getImporter().loadSpieltagFromFile(tag.getAbsolutePath());
-						res.add(Generator.createSpieltagReport(staffel, game, teams));
+						res.add(Generator.createSpieltagReport(staffel, game, teams, AllGamesPanel.this.chkReport.getSelection()));
 					}
 				}
 

@@ -60,7 +60,7 @@ public class Generator {
 		String[] columns = new String[] { "name", "person", "strasse", "ort", "telefon", "telefax", "email"};
 
 		Map<String, String> parameters = new HashMap<String, String>();
-		parameters.put("year", staffel.getJahr() );
+		parameters.put("title", staffel.getTitle() );
 		parameters.put("staffelname", staffel.getName());
 
 		JasperReport jr;
@@ -96,7 +96,7 @@ public class Generator {
 		String[] columns = new String[] { "jobtitle", "person", "strasse", "ort", "telefon", "telefax", "email"};
 
 		Map<String, String> parameters = new HashMap<String, String>();
-		parameters.put("year", staffel.getJahr() );
+		parameters.put("title", staffel.getTitle() );
 
 		JasperReport jr;
 		JasperPrint jprint = null;
@@ -130,7 +130,7 @@ public class Generator {
 		String[] columns = new String[] { "teamname", "player1", "player2", "year1", "year2"};
 
 		Map<String, String> parameters = new HashMap<String, String>();
-		parameters.put("year", staffel.getJahr() );
+		parameters.put("title", staffel.getTitle() );
 		parameters.put("staffelname", staffel.getName());
 
 		parameters.put("name", staffel.getStaffelleiter_name());
@@ -172,7 +172,7 @@ public class Generator {
 		String[] columns = new String[] { "name", "strasse", "ort", "tel", "verein"};
 
 		Map<String, String> parameters = new HashMap<String, String>();
-		parameters.put("year", staffel.getJahr() );
+		parameters.put("title", staffel.getTitle() );
 		parameters.put("staffelname", staffel.getName());
 
 		JasperReport jr;
@@ -232,14 +232,15 @@ public class Generator {
 	 * @param tag
 	 * @param staffel
 	 * @param teams
+	 * @param reporting
 	 * @return Spieltag
 	 * @throws PdfGeneratorException
 	 */
-	public static JasperPrint createSpieltagReport(Staffel staffel, Spieltag tag, Team[] teams) throws PdfGeneratorException {
+	public static JasperPrint createSpieltagReport(Staffel staffel, Spieltag tag, Team[] teams, boolean reporting) throws PdfGeneratorException {
 		if (staffel == null) {
 			throw new IllegalArgumentException("Staffel musn't be null");
 		}
-		if (tag == null) {
+		if ((tag == null)) {
 			throw new IllegalArgumentException("Tag musn't be null");
 		}
 
@@ -256,7 +257,7 @@ public class Generator {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
 
 		Map<String, String> parameters = new HashMap<String, String>();
-		parameters.put("year", staffel.getJahr());
+		parameters.put("title", staffel.getTitle());
 		parameters.put("staffelname", staffel.getName());
 		parameters.put("headline", tag.getTitle());
 		parameters.put("datum", tag.getDatum());
@@ -292,12 +293,14 @@ public class Generator {
 			jprint = JasperFillManager.fillReport(jr, parameters, new HoegernetDataSource(vecjas, columns));
 			jprint.setName(tag.getTitle());
 
-			JasperPrint dayrep = Generator.createReportingReport(staffel, tag, actualTeams.toArray(new Team[actualTeams.size()]));
+			if (reporting) {
+				JasperPrint dayrep = Generator.createReportingReport(staffel, tag, actualTeams.toArray(new Team[actualTeams.size()]));
 
-			for (Object obj : dayrep.getPages()) {
-				if (obj instanceof JRPrintPage) {
-					JRPrintPage page = (JRPrintPage) obj;
-					jprint.addPage(page);
+				for (Object obj : dayrep.getPages()) {
+					if (obj instanceof JRPrintPage) {
+						JRPrintPage page = (JRPrintPage) obj;
+						jprint.addPage(page);
+					}
 				}
 			}
 		} catch (Exception ex) {
@@ -348,7 +351,7 @@ public class Generator {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
 
 		Map<String, String> parameters = new HashMap<String, String>();
-		parameters.put("year", staffel.getJahr());
+		parameters.put("title", staffel.getTitle());
 		parameters.put("staffelname", staffel.getName());
 		parameters.put("header", tag.getTitle());
 		parameters.put("ort", tag.getOrt());

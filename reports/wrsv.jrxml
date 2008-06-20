@@ -23,7 +23,7 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
-	<parameter name="year" isForPrompting="false" class="java.lang.String">
+	<parameter name="title" isForPrompting="false" class="java.lang.String">
 		<defaultValueExpression ><![CDATA["2006/2007"]]></defaultValueExpression>
 	</parameter>
 
@@ -115,7 +115,7 @@
 					<textElement textAlignment="Center">
 						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Verbandsrunde " + $P{year}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

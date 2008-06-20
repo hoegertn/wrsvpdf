@@ -11,6 +11,7 @@ import org.eclipse.swt.widgets.Text;
 
 import com.hoegernet.swt.bricks.LabelBrick;
 import com.hoegernet.swt.bricks.TextFieldBrick;
+import com.hoegernet.swt.bricks.buttons.CheckBoxButtonBrick;
 import com.hoegernet.swt.bricks.buttons.FileSelectButtonBrick;
 import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 import com.hoegernet.wrsvpdf.fileio.FileIORegistry;
@@ -38,6 +39,8 @@ public class GamePanel extends MainPanel {
 
 	private TextFieldBrick teamText;
 
+	private CheckBoxButtonBrick chkReport;
+
 	/**
 	 * @param parent
 	 * @param style
@@ -62,6 +65,10 @@ public class GamePanel extends MainPanel {
 		this.gameText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new FileSelectButtonBrick(parent, this.gameText, "*.rbt");
 
+		new LabelBrick(parent, SWT.NONE, "Berichtsbogen?");
+		this.chkReport = new CheckBoxButtonBrick(parent, "");
+		new LabelBrick(parent, SWT.NONE, "");
+
 		new LabelBrick(parent, SWT.NONE, "PDF erstellen");
 		new GOButtonBrick(parent, "Spieltag.pdf") {
 			@Override
@@ -71,7 +78,7 @@ public class GamePanel extends MainPanel {
 				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(GamePanel.this.staffelText.getText());
 				Spieltag game = FileIORegistry.getImporter().loadSpieltagFromFile(GamePanel.this.gameText.getText());
 				Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(GamePanel.this.teamText.getText());
-				return Generator.createSpieltagReport(staffel, game, teams);
+				return Generator.createSpieltagReport(staffel, game, teams, GamePanel.this.chkReport.getSelection());
 			}
 		};
 

@@ -37,7 +37,7 @@ public class FlatFileImport implements IFileImporter {
 		}
 
 		String[] firstline = FileIO.getFieldsFromLine(lines[0]);
-		staffel.setJahr(firstline[0]);
+		staffel.setTitle(firstline[0]);
 		staffel.setName(firstline[1]);
 
 		String[] person = FileIO.getFieldsFromLine(lines[1]);

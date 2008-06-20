@@ -1,4 +1,8 @@
-[build:2.0.1_2008-00-06]
+[build:2.0.2_2008-06-21]
+- remove "Verbandsrunde"-tag
+- simple dayreport 
+
+[build:2.0.1_2008-03-06]
 - exit button to close application
 - saves staffel filename between panels 
 
