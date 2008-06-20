@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Packaging Generator" default="dev" basedir="../">
 
-  <property name="target" value="../~wrsvpdf" />
+  <property name="target" value="../../~wrsvpdf" />
   <property name="loggingInstall" value="C:/DevelopmentTools/commons-logging-1.1.1" />
   <property name="package" value="${target}/package" />
 
 <!-- Java-Quelltext -->
-  <fileset id="JavaQuelltext" dir="./src">
+  <fileset id="JavaQuelltext" dir="${target}/src">
     <include name="**/*.java" />
   </fileset>
 
@@ -16,7 +16,9 @@
   </fileset>
 
   <path id="LibPath">
-    <pathelement location="./lib" />
+    <fileset id="LibDirectory" dir="${basedir}/lib/">
+      <include name="**/*.jar" />
+    </fileset>
     <pathelement location="${loggingInstall}/commons-logging.jar" />
   </path>
 
@@ -24,17 +26,15 @@
   <target name="dev" description="Development Build">
     <antcall target="-clean" />
     <antcall target="-prepare" />
+    <antcall target="-copySrc" />
     <antcall target="-compileAndJar" />
   </target>
 
   <target name="int" description="Integration Build">
-  
-    <!-- Installationsdatei erstellen -->
-    <getbuildnr buildnrproperty="build.number" />
-    
     
     <antcall target="-clean" />
     <antcall target="-prepare" />
+    <antcall target="-copySrc" />
     <antcall target="-compileAndJar" />
     <antcall target="-javadoc" />
     <antcall target="-package" />
@@ -67,13 +67,12 @@
     
     <mkdir dir="${package}/docs" />
     <mkdir dir="${package}/docs/javadoc" />
-    <mkdir dir="${package}/config" />
     <mkdir dir="${package}/demo" />
     <mkdir dir="${package}/lib" />
     <mkdir dir="${package}/images" />
     <mkdir dir="${package}/reports" />
 
-    <record name="${target}/build.log" />
+    <record name="${target}/../build.log" />
     
   </target>
   
@@ -83,12 +82,15 @@
 
   <target name="-copySrc" description="Vorbereitung und Initialisierung">
   
+    <!-- Installationsdatei erstellen -->
+    <getbuildnr buildnrproperty="build.number" />
+    
     <copy todir="${target}/src">
       <fileset dir="${basedir}/src">
         <include name="**/*.*" />
       </fileset>
       <filterset>
-	<filter token="SVN" value="${buildNr}" />
+	<filter token="SVN" value="${build.number}" />
       </filterset>
     </copy>
     
@@ -96,14 +98,13 @@
 
 
     <!-- ==== Installationsdatei erstellen ==== -->
-  <target name="-compileAndJar" depends="clean, prepare" description="Erstellt die Development Builds">
-
+  <target name="-compileAndJar" description="Erstellt die Development Builds">
     
-    <javac srcdir="./src" destdir="${target}/bin" debug="true" debuglevel="lines,vars,source">
+    <javac srcdir="${target}/src" destdir="${target}/bin" debug="true" debuglevel="lines,vars,source">
       <classpath refid="LibPath" />
     </javac>
 
-    <jar destfile="${target}/jar/com.hoegernet.wrsvpdf.jar" manifest="./config/MANIFEST.MF">
+    <jar destfile="${target}/jar/com.hoegernet.wrsvpdf.jar" manifest="${basedir}/config/MANIFEST.MF">
       <fileset refid="JavaBinary" />
       <fileset refid="JavaQuelltext" />
     </jar>
@@ -126,25 +127,25 @@
 	</copy>	
 
         <copy todir="${package}/docs">
-		<fileset dir="./docs" includes="**.*" />	
+		<fileset dir="${basedir}/docs" includes="**.*" />	
 	</copy>	
         <copy todir="${package}/docs/javadoc">
 		<fileset dir="${target}/javadoc" includes="**.*" />	
 	</copy>	
 	<copy todir="${package}">
-		<fileset dir="./config" includes="**.*" />	
+		<fileset dir="${basedir}/config" includes="**.*" />	
 	</copy>	
 	<copy todir="${package}/demo">
-		<fileset dir="./demo" includes="**.*" />	
+		<fileset dir="${basedir}/demo" includes="**.*" />	
 	</copy>	
 	<copy todir="${package}/lib">
-		<fileset dir="./lib" includes="**.*" />	
+		<fileset dir="${basedir}/lib" includes="**.*" />	
 	</copy>	
 	<copy todir="${package}/images">
-		<fileset dir="./images" includes="**.*" />	
+		<fileset dir="${basedir}/images" includes="**.*" />	
 	</copy>	
 	<copy todir="${package}/reports">
-		<fileset dir="./reports" includes="**.*" />	
+		<fileset dir="${basedir}/reports" includes="**.*" />	
 	</copy>	
 </target>
 </project>

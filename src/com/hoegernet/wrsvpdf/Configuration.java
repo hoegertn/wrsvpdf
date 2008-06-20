@@ -29,7 +29,7 @@ public interface Configuration {
 	/**  */
 	public final static String VERSION_NORMAL = Configuration.VERSION_MAJOR + "." + Configuration.VERSION_MINOR + "." + Configuration.VERSION_REVISION;
 	/**  */
-	public final static String VERSION_FULL = Configuration.VERSION_NORMAL + "_" + Configuration.VERSION_RELEASE_DATE + "[" + Configuration.VERSION_SVN_REVISION + "]";
+	public final static String VERSION_FULL = Configuration.VERSION_NORMAL + "_" + Configuration.VERSION_RELEASE_DATE + "#" + Configuration.VERSION_SVN_REVISION;
 
 	/**  */
 	public final static String CONTACT_EMAIL = "admin@hoegernet.de";
