@@ -48,7 +48,7 @@ public class FileMemory {
 	}
 
 	/**
-	 * @return
+	 * @return -
 	 */
 	public String getStaffelFile() {
 		return this.staffelFile;

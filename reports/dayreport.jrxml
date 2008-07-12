@@ -877,7 +877,7 @@
 				<staticText>
 					<reportElement
 						x="0"
-						y="82"
+						y="107"
 						width="98"
 						height="12"
 						key="staticText-63"/>
@@ -886,19 +886,6 @@
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<text><![CDATA[Besondere Vorkommnisse:]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="0"
-						y="94"
-						width="511"
-						height="25"
-						key="staticText-64"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
-					<textElement>
-						<font fontName="Arial"/>
-					</textElement>
-				<text><![CDATA[]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -1401,6 +1388,19 @@
 					</textElement>
 				<text><![CDATA[Fachwart Radball WRSV, Fachwart Radball BRV, Staffelleiter, Kommisärsobmann, Internetbeauftragter]]></text>
 				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="84"
+						width="460"
+						height="18"
+						key="textField-34"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Berichtsbogen " + $P{header} + " in " + $P{ort}]]></textFieldExpression>
+				</textField>
 			</band>
 		</summary>
 </jasperReport>
