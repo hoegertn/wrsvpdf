@@ -106,7 +106,6 @@
 
 		<jar destfile="${target}/jar/com.hoegernet.wrsvpdf.jar" manifest="${basedir}/config/MANIFEST.MF">
 			<fileset refid="JavaBinary" />
-			<fileset refid="JavaQuelltext" />
 		</jar>
 
 	</target>
@@ -133,7 +132,7 @@
 			<fileset dir="${target}/javadoc" includes="**/**.*" />
 		</copy>
 		<copy todir="${package}">
-			<fileset dir="${basedir}/config" includes="**.*" />
+			<fileset dir="${basedir}/config" includes="**.*" excludes="MANIFEST.MF" />
 		</copy>
 		<copy todir="${package}/demo">
 			<fileset dir="${basedir}/demo" includes="**/**.*" />
