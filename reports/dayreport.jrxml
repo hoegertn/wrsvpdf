@@ -1379,14 +1379,14 @@
 					<reportElement
 						x="70"
 						y="569"
-						width="384"
+						width="441"
 						height="12"
 						key="staticText-117"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[Fachwart Radball WRSV, Fachwart Radball BRV, Staffelleiter, Kommisärsobmann, Internetbeauftragter]]></text>
+				<text><![CDATA[Fachwart Radball WRSV & BRV, Staffelleiter, Kommisärsobmann, Internetbeauftragter, Ergebnisdienst BRV, Jugendreferent]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
