@@ -11,14 +11,12 @@ import com.hoegernet.wrsvpdf.ui.MainPanel;
 
 /**
  * type: com.hoegernet.wrsvpdf->WRSVPanel
- *
- * @author Thorsten Hoeger
- * created: 24.07.2007
- * file: WRSVPanel.java
- *
+ * 
+ * @author Thorsten Hoeger created: 24.07.2007 file: WRSVPanel.java
+ * 
  */
 public class PlainPanel extends MainPanel {
-
+	
 	/**
 	 * @param parent
 	 * @param style
@@ -27,10 +25,10 @@ public class PlainPanel extends MainPanel {
 	public PlainPanel(Composite parent, int style, int formstyle) {
 		super(parent, style, formstyle);
 	}
-
+	
 	@Override
 	protected void createPanelContents(Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Aktion auswählen");
 	}
-
+	
 }

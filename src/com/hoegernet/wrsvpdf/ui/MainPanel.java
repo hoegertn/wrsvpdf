@@ -12,14 +12,12 @@ import com.hoegernet.swt.bricks.container.CompositeBrick;
 
 /**
  * type: com.hoegernet.wrsvpdf->MainPanel
- *
- * @author Thorsten Hoeger
- * created: 24.07.2007
- * file: MainPanel.java
- *
+ * 
+ * @author Thorsten Hoeger created: 24.07.2007 file: MainPanel.java
+ * 
  */
 public abstract class MainPanel extends CompositeBrick {
-
+	
 	/**
 	 * @param parent
 	 * @param style
@@ -31,20 +29,21 @@ public abstract class MainPanel extends CompositeBrick {
 	
 	@Override
 	protected void createContents(Composite parent) {
-		this.setBackground(new Color(getShell().getDisplay(), 255, 255, 255));
+		this.setBackground(new Color(this.getShell().getDisplay(), 255, 255, 255));
 		this.setBackgroundMode(SWT.INHERIT_FORCE);
-
+		
 		Image image = new Image(null, "images" + File.separatorChar + "header.jpg");
 		new ImageBrick(parent, SWT.NONE, image);
 		
-		new CompositeBrick(parent, SWT.NONE, THREE_COL) {
+		new CompositeBrick(parent, SWT.NONE, CompositeBrick.THREE_COL) {
+			
 			@Override
 			protected void createContents(Composite panel) {
-				MainPanel.this.createPanelContents(panel);		
+				MainPanel.this.createPanelContents(panel);
 			}
 		};
 	}
-
+	
 	protected abstract void createPanelContents(Composite parent);
-		
+	
 }

@@ -337,7 +337,7 @@
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<text><![CDATA[gez. Wolfgang Jauch
-Fachwart Radball/Radpolo WRSV]]></text>
+Fachwart Radball WRSV]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -350,8 +350,8 @@ Fachwart Radball/Radpolo WRSV]]></text>
 					<textElement>
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[gez. Joachim Haist
-Fachwart Radball/Radpolo BRV]]></text>
+				<text><![CDATA[gez. Klaus Holzer
+Fachwart Radball BRV]]></text>
 				</staticText>
 			</band>
 		</lastPageFooter>

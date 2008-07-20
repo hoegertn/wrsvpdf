@@ -12,17 +12,16 @@ import com.hoegernet.wrsvpdf.ui.MainFrame.PanelType;
 
 /**
  * type: com.hoegernet.wrsvpdf->WRSVExpandLabel
- *
- * @author Thorsten Hoeger
- * created: 17.09.2007
- * file: WRSVExpandLabel.java
- *
+ * 
+ * @author Thorsten Hoeger created: 17.09.2007 file: WRSVExpandLabel.java
+ * 
  */
 public class WRSVExpandLabel extends LabelButtonBrickAdapter {
-
+	
 	private PanelType type = PanelType.START;
-
+	
 	private MainFrame frame;
+	
 
 	/**
 	 * @param parent
@@ -35,15 +34,15 @@ public class WRSVExpandLabel extends LabelButtonBrickAdapter {
 		this.type = type;
 		this.frame = frame;
 	}
-
+	
 	@Override
 	protected void execute() {
 		this.frame.setActivePanel(this.type);
 	}
-
+	
 	@Override
 	public Color getHoverColor() {
 		return new Color(this.getDisplay(), 255, 0, 0);
 	}
-
+	
 }

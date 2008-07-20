@@ -352,11 +352,11 @@
 			</band>
 		</pageFooter>
 		<lastPageFooter>
-			<band height="63"  isSplitAllowed="true" >
+			<band height="74"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="260"
-						y="49"
+						x="0"
+						y="61"
 						width="118"
 						height="12"
 						key="textField-33"/>
@@ -495,6 +495,19 @@
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="260"
+						y="47"
+						width="251"
+						height="13"
+						key="staticText-18"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[In Klammern bitte Name in Blockschrift hinzufügen]]></text>
 				</staticText>
 			</band>
 		</lastPageFooter>

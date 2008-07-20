@@ -21,15 +21,14 @@ import com.hoegernet.wrsvpdf.ui.MainPanel;
 
 /**
  * type: com.hoegernet.wrsvpdf->WRSVPanel
- *
- * @author Thorsten Hoeger
- * created: 24.07.2007
- * file: WRSVPanel.java
- *
+ * 
+ * @author Thorsten Hoeger created: 24.07.2007 file: WRSVPanel.java
+ * 
  */
 public class RankingPanel extends MainPanel {
-
+	
 	private TextFieldBrick rankingText;
+	
 
 	/**
 	 * @param parent
@@ -39,22 +38,23 @@ public class RankingPanel extends MainPanel {
 	public RankingPanel(Composite parent, int style, int formstyle) {
 		super(parent, style, formstyle);
 	}
-
+	
 	@Override
 	protected void createPanelContents(Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Tabellendatei auswählen");
 		this.rankingText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new FileSelectButtonBrick(parent, this.rankingText, "*.rbr");
-
+		
 		new LabelBrick(parent, SWT.NONE, "PDF erstellen");
 		new GOButtonBrick(parent, "Tabelle.pdf") {
+			
 			@Override
 			protected JasperPrint getReport() throws PdfGeneratorException {
 				Tabelle tabelle = FileIORegistry.getImporter().loadRankingFromFile(RankingPanel.this.rankingText.getText());
 				return Generator.createRankingReport(tabelle);
 			}
 		};
-
+		
 	}
-
+	
 }

@@ -21,14 +21,12 @@ import com.hoegernet.wrsvpdf.ui.MainFrame.PanelType;
 
 /**
  * type: com.hoegernet.wrsvpdf->Expand
- *
- * @author Thorsten Hoeger
- * created: 22.07.2007
- * file: Expand.java
- *
+ * 
+ * @author Thorsten Hoeger created: 22.07.2007 file: Expand.java
+ * 
  */
 public class Expand extends ExpandBarBrick {
-
+	
 	/**
 	 * @param parent
 	 * @param style
@@ -38,60 +36,63 @@ public class Expand extends ExpandBarBrick {
 	public Expand(Composite parent, int style, int formstyle, MainFrame frame) {
 		super(parent, style, formstyle, frame);
 	}
-
+	
 	@Override
 	protected void createContents(Composite parent) {
-		ExpandBarBrick bar = (ExpandBarBrick)parent;
+		ExpandBarBrick bar = (ExpandBarBrick) parent;
 		final Image pdf = new Image(null, "images" + File.separatorChar + "pdf.jpg");
 		final Image ball = new Image(null, "images" + File.separatorChar + "ball.jpg");
-
+		
 		// First item
-		CompositeBrick actions = new CompositeBrick(bar, SWT.NONE, CompositeBrick.TWO_COL){
+		CompositeBrick actions = new CompositeBrick(bar, SWT.NONE, CompositeBrick.TWO_COL) {
+			
 			@Override
 			public void createContents(Composite expand) {
-				MainFrame frame = (MainFrame)Expand.this.getDesignatedObject();
-
+				MainFrame frame = (MainFrame) Expand.this.getDesignatedObject();
+				
 				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Verbandsadressen", PanelType.WRSV, frame);
-
+				
 				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Vereine", PanelType.CLUBS, frame);
-
+				
 				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Hallenverzeichnis", PanelType.GYM, frame);
-
+				
 				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Mannschaften", PanelType.TEAMS, frame);
-
+				
 				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Spieltag", PanelType.SPIELTAG, frame);
-
+				
 				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Alle Spieltage", PanelType.SPIELTAG_DIR, frame);
-
+				
 				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Tabelle", PanelType.RANKING, frame);
-
+				
 			}
 		};
-
+		
 		// Second item
-		CompositeBrick help = new CompositeBrick(bar, SWT.NONE, CompositeBrick.TWO_COL){
+		CompositeBrick help = new CompositeBrick(bar, SWT.NONE, CompositeBrick.TWO_COL) {
+			
 			@Override
 			public void createContents(Composite expand) {
-//				new ImageBrick(expand, SWT.NONE, ball);
-//				new LabelButtonBrickAdapter(expand, SWT.NONE, "Hilfe") {
-//					@Override
-//					protected void execute() {
-//						// TODO Show help
-//					}
-//					@Override
-//					public Color getHoverColor() {
-//						return new Color(this.getDisplay(), 255, 0, 0);
-//					}
-//				};
+				// new ImageBrick(expand, SWT.NONE, ball);
+				// new LabelButtonBrickAdapter(expand, SWT.NONE, "Hilfe") {
+				// @Override
+				// protected void execute() {
+				// // TODO Show help
+				// }
+				// @Override
+				// public Color getHoverColor() {
+				// return new Color(this.getDisplay(), 255, 0, 0);
+				// }
+				// };
 				new ImageBrick(expand, SWT.NONE, ball);
 				new LabelButtonBrickAdapter(expand, SWT.NONE, "Kontakt") {
+					
 					@Override
 					protected void execute() {
 						// TODO Kontakt
@@ -100,6 +101,7 @@ public class Expand extends ExpandBarBrick {
 						msg.setMessage(Configuration.CONTACT_EMAIL);
 						msg.open();
 					}
+					
 					@Override
 					public Color getHoverColor() {
 						return new Color(this.getDisplay(), 255, 0, 0);
@@ -107,6 +109,7 @@ public class Expand extends ExpandBarBrick {
 				};
 				new ImageBrick(expand, SWT.NONE, ball);
 				new LabelButtonBrickAdapter(expand, SWT.NONE, "About") {
+					
 					@Override
 					protected void execute() {
 						// TODO About
@@ -115,6 +118,7 @@ public class Expand extends ExpandBarBrick {
 						msg.setMessage("WRSV Spielplandruck - Version " + Configuration.VERSION_FULL);
 						msg.open();
 					}
+					
 					@Override
 					public Color getHoverColor() {
 						return new Color(this.getDisplay(), 255, 0, 0);
@@ -122,10 +126,12 @@ public class Expand extends ExpandBarBrick {
 				};
 				new ImageBrick(expand, SWT.NONE, ball);
 				new LabelButtonBrickAdapter(expand, SWT.NONE, "Schlieﬂen") {
+					
 					@Override
 					protected void execute() {
 						System.exit(0);
 					}
+					
 					@Override
 					public Color getHoverColor() {
 						return new Color(this.getDisplay(), 255, 0, 0);
@@ -133,9 +139,9 @@ public class Expand extends ExpandBarBrick {
 				};
 			}
 		};
-
+		
 		new ExpandItemBrick(bar, SWT.NONE, 0, "PDF Erstellung", pdf, actions, true);
 		new ExpandItemBrick(bar, SWT.NONE, 1, "Information", pdf, help, true);
 	}
-
+	
 }

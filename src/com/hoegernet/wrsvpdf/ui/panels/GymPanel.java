@@ -23,17 +23,16 @@ import com.hoegernet.wrsvpdf.ui.MainPanel;
 
 /**
  * type: com.hoegernet.wrsvpdf->WRSVPanel
- *
- * @author Thorsten Hoeger
- * created: 24.07.2007
- * file: WRSVPanel.java
- *
+ * 
+ * @author Thorsten Hoeger created: 24.07.2007 file: WRSVPanel.java
+ * 
  */
 public class GymPanel extends MainPanel {
-
+	
 	private TextFieldBrick staffelText;
-
+	
 	private TextFieldBrick gymText;
+	
 
 	/**
 	 * @param parent
@@ -43,29 +42,30 @@ public class GymPanel extends MainPanel {
 	public GymPanel(Composite parent, int style, int formstyle) {
 		super(parent, style, formstyle);
 	}
-
+	
 	@Override
 	protected void createPanelContents(Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Staffel auswählen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
 		new FileSelectButtonBrick(parent, this.staffelText, "*.rbs");
-
+		
 		new LabelBrick(parent, SWT.NONE, "Hallendatei auswählen");
 		this.gymText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new FileSelectButtonBrick(parent, this.gymText, "*.rbh");
-
+		
 		new LabelBrick(parent, SWT.NONE, "PDF erstellen");
 		new GOButtonBrick(parent, "Hallen.pdf") {
+			
 			@Override
 			protected JasperPrint getReport() throws PdfGeneratorException {
 				FileMemory.getInstance().setStaffelFile(GymPanel.this.staffelText.getText());
-
+				
 				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(GymPanel.this.staffelText.getText());
 				Halle[] gyms = FileIORegistry.getImporter().loadHallenFromFile(GymPanel.this.gymText.getText());
 				return Generator.createHallenReport(staffel, gyms);
 			}
 		};
 	}
-
+	
 }

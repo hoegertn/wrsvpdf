@@ -1,3 +1,7 @@
+[build:2.2.0_2008-07-20]
+- reports changed
+- code clean-up
+
 [build:2.1.1_2008-07-12]
 - wrsv.ini changed addresses
 - dayreport receivers changed

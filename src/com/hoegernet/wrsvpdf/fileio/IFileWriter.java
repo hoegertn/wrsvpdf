@@ -10,23 +10,23 @@ import com.hoegernet.wrsvpdf.types.Verein;
 
 /**
  * Copyright 2007 Hoegernet IT Services
+ * 
  * @author Thorsten Höger
- *
- * Projekt: com.hoegernet.wrsvpdf
- * Type: IFileWriter
- *
- * created: 18.01.2008
- *
+ * 
+ *         Projekt: com.hoegernet.wrsvpdf Type: IFileWriter
+ * 
+ *         created: 18.01.2008
+ * 
  */
 public interface IFileWriter {
-
+	
 	/**
 	 * @param staffel
 	 * @param pdfFileName
 	 * @throws PdfGeneratorException
 	 */
 	public void writeWRSVReport(Staffel staffel, String pdfFileName) throws PdfGeneratorException;
-
+	
 	/**
 	 * @param staffel
 	 * @param vereine
@@ -34,7 +34,7 @@ public interface IFileWriter {
 	 * @throws PdfGeneratorException
 	 */
 	public void writeClubReport(Staffel staffel, Verein[] vereine, String pdfFileName) throws PdfGeneratorException;
-
+	
 	/**
 	 * @param staffel
 	 * @param teams
@@ -42,7 +42,7 @@ public interface IFileWriter {
 	 * @throws PdfGeneratorException
 	 */
 	public void writeTeamReport(Staffel staffel, Team[] teams, String pdfFileName) throws PdfGeneratorException;
-
+	
 	/**
 	 * @param staffel
 	 * @param hallen
@@ -50,14 +50,14 @@ public interface IFileWriter {
 	 * @throws PdfGeneratorException
 	 */
 	public void writeHallenReport(Staffel staffel, Halle[] hallen, String pdfFileName) throws PdfGeneratorException;
-
+	
 	/**
 	 * @param tabelle
 	 * @param pdfFileName
 	 * @throws PdfGeneratorException
 	 */
 	public void writeRankingReport(Tabelle tabelle, String pdfFileName) throws PdfGeneratorException;
-
+	
 	/**
 	 * @param staffel
 	 * @param tag
@@ -65,5 +65,5 @@ public interface IFileWriter {
 	 * @throws PdfGeneratorException
 	 */
 	public void writeSpieltagReport(Staffel staffel, Spieltag tag, String pdfFileName) throws PdfGeneratorException;
-
+	
 }

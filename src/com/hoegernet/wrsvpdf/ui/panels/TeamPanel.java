@@ -23,17 +23,16 @@ import com.hoegernet.wrsvpdf.ui.MainPanel;
 
 /**
  * type: com.hoegernet.wrsvpdf->WRSVPanel
- *
- * @author Thorsten Hoeger
- * created: 24.07.2007
- * file: WRSVPanel.java
- *
+ * 
+ * @author Thorsten Hoeger created: 24.07.2007 file: WRSVPanel.java
+ * 
  */
 public class TeamPanel extends MainPanel {
-
+	
 	private TextFieldBrick staffelText;
-
+	
 	private TextFieldBrick teamText;
+	
 
 	/**
 	 * @param parent
@@ -43,31 +42,32 @@ public class TeamPanel extends MainPanel {
 	public TeamPanel(Composite parent, int style, int formstyle) {
 		super(parent, style, formstyle);
 	}
-
+	
 	@Override
 	protected void createPanelContents(Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Staffel auswählen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
 		new FileSelectButtonBrick(parent, this.staffelText, "*.rbs");
-
+		
 		new LabelBrick(parent, SWT.NONE, "Mannschaftsdatei auswählen");
 		this.teamText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new FileSelectButtonBrick(parent, this.teamText, "*.rbm");
-
+		
 		new LabelBrick(parent, SWT.NONE, "PDF erstellen");
 		new GOButtonBrick(parent, "Mannschaften.pdf") {
+			
 			@Override
 			protected JasperPrint getReport() throws PdfGeneratorException {
 				FileMemory.getInstance().setStaffelFile(TeamPanel.this.staffelText.getText());
-
+				
 				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(TeamPanel.this.staffelText.getText());
 				Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(TeamPanel.this.teamText.getText());
-
+				
 				return Generator.createTeamReport(staffel, teams);
 			}
 		};
-
+		
 	}
-
+	
 }

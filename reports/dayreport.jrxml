@@ -1191,7 +1191,7 @@
 					<textElement textAlignment="Center">
 						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Verbandsrunde " + $P{title}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -1360,7 +1360,7 @@
 					<textElement>
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[Fachwart Radball WRSV]]></text>
+				<text><![CDATA[Fachwart Radball WRSV bzw. Jugendreferent]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -1386,7 +1386,7 @@
 					<textElement>
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[Fachwart Radball WRSV & BRV, Staffelleiter, Kommisärsobmann, Internetbeauftragter, Ergebnisdienst BRV, Jugendreferent]]></text>
+				<text><![CDATA[Fachwart Radball WRSV, Staffelleiter, Kommisärsobmann, Internetbeauftragter, Ergebnisdienst BRV, Jugendreferent]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

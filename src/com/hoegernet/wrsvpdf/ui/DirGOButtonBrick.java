@@ -24,14 +24,12 @@ import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 
 /**
  * type: SWTTest->PushButtonBrick
- *
- * @author Thorsten Hoeger
- * created: 22.07.2007
- * file: PushButtonBrick.java
- *
+ * 
+ * @author Thorsten Hoeger created: 22.07.2007 file: PushButtonBrick.java
+ * 
  */
 public abstract class DirGOButtonBrick extends PushButtonBrick {
-
+	
 	/**
 	 * @param parent
 	 * @param label
@@ -39,9 +37,11 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 	public DirGOButtonBrick(Composite parent, String label) {
 		super(parent, label);
 		this.addSelectionListener(new SelectionListener() {
+			
 			public void widgetDefaultSelected(SelectionEvent e) {
 				//
 			}
+			
 			public void widgetSelected(SelectionEvent e) {
 				DirectoryDialog dialog = new DirectoryDialog(DirGOButtonBrick.this.getShell(), SWT.SAVE);
 				String file = dialog.open();
@@ -51,7 +51,7 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 			}
 		});
 	}
-
+	
 	/**
 	 * @param parent
 	 */
@@ -59,17 +59,18 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 		this(parent, "");
 		this.setImage(new Image(null, "images" + File.separatorChar + "go.jpg"));
 	}
-
+	
 	@Override
 	protected void checkSubclass() {
-		//super.checkSubclass();
+		// super.checkSubclass();
 	}
-
+	
 	/**
 	 * @param dirName
 	 */
 	public void createReport(final String dirName) {
 		Runnable job = new Runnable() {
+			
 			public void run() {
 				try {
 					String dir = dirName;
@@ -77,16 +78,16 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 						dir += "\\";
 					}
 					List<JasperPrint> reports = DirGOButtonBrick.this.getReports();
-
+					
 					for (JasperPrint print : reports) {
 						JasperExportManager.exportReportToPdfFile(print, dir + print.getName() + ".pdf");
 					}
-
+					
 					MessageBox msg = new MessageBox(DirGOButtonBrick.this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
 					msg.setText("Generierung");
 					msg.setMessage("Dateien in Verzeichnis " + dirName + " erfolgreich erstellt");
 					msg.open();
-
+					
 				} catch (Exception ex) {
 					ex.printStackTrace();
 					Logger.getInstance().logError("FileOutput", "Writing failed: " + ex.getMessage());
@@ -99,6 +100,6 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 		};
 		BusyIndicator.showWhile(this.getDisplay(), job);
 	}
-
+	
 	protected abstract List<JasperPrint> getReports() throws PdfGeneratorException;
 }

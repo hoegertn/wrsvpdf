@@ -23,21 +23,17 @@ import com.hoegernet.wrsvpdf.ui.panels.WRSVPanel;
 
 /**
  * type: com.hoegernet.wrsvpdf->MainFrame
- *
- * @author Thorsten Hoeger
- * created: 16.09.2007
- * file: MainFrame.java
- *
+ * 
+ * @author Thorsten Hoeger created: 16.09.2007 file: MainFrame.java
+ * 
  */
 public class MainFrame extends MyShell {
-
+	
 	/**
 	 * type: com.hoegernet.wrsvpdf->PanelType
-	 *
-	 * @author Thorsten Hoeger
-	 * created: 22.07.2007
-	 * file: MainFrame.java
-	 *
+	 * 
+	 * @author Thorsten Hoeger created: 22.07.2007 file: MainFrame.java
+	 * 
 	 */
 	public enum PanelType {
 		/**	 */
@@ -57,10 +53,12 @@ public class MainFrame extends MyShell {
 		/**	 */
 		SPIELTAG_DIR;
 	}
+	
 
 	private SashFormBrick sfb = null;
-
+	
 	private MainPanel frame = null;
+	
 
 	/**
 	 * Default constructor
@@ -68,25 +66,26 @@ public class MainFrame extends MyShell {
 	public MainFrame() {
 		super();
 	}
-
+	
 	@Override
 	protected Point getSize() {
-		return new Point(900,600);
+		return new Point(900, 600);
 	}
-
+	
 	@Override
 	protected String getTitle() {
 		return "WRSV Spielplandruck - Version " + Configuration.VERSION_NORMAL;
 	}
-
+	
 	@Override
 	protected Image getIcon() {
 		return new Image(null, "images" + File.separatorChar + "pdf.jpg");
 	}
-
+	
 	@Override
 	protected void createContents(Composite parent) {
 		this.sfb = new SashFormBrick(parent, SWT.BORDER) {
+			
 			@Override
 			protected void createContents(Composite form) {
 				new Expand(form, SWT.V_SCROLL, ExpandBarBrick.DEFAULT, MainFrame.this);
@@ -95,8 +94,7 @@ public class MainFrame extends MyShell {
 		};
 		this.sfb.setWeights(new int[] {30, 70});
 	}
-
-
+	
 	/**
 	 * @param type
 	 */
@@ -104,7 +102,7 @@ public class MainFrame extends MyShell {
 		if (this.frame != null) {
 			this.frame.dispose();
 		}
-
+		
 		switch (type) {
 		case START:
 			this.frame = new PlainPanel(this.sfb, SWT.FILL, CompositeBrick.DEFAULT);
@@ -133,6 +131,5 @@ public class MainFrame extends MyShell {
 		}
 		this.sfb.setWeights(new int[] {30, 70});
 	}
-
+	
 }
-
