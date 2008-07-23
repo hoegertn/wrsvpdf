@@ -298,13 +298,13 @@
 			</band>
 		</pageFooter>
 		<lastPageFooter>
-			<band height="122"  isSplitAllowed="true" >
+			<band height="235"  isSplitAllowed="true" >
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="88"
 						y="7"
 						width="337"
-						height="72"
+						height="197"
 						key="textField-16"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
@@ -328,7 +328,7 @@
 				<staticText>
 					<reportElement
 						x="3"
-						y="98"
+						y="210"
 						width="123"
 						height="23"
 						key="staticText-3"/>
@@ -342,7 +342,7 @@ Fachwart Radball WRSV]]></text>
 				<staticText>
 					<reportElement
 						x="246"
-						y="98"
+						y="210"
 						width="123"
 						height="23"
 						key="staticText-4"/>
