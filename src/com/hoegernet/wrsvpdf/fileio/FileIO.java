@@ -107,13 +107,13 @@ public class FileIO {
 	 */
 	public static String[] getSpielFromLine(String line) {
 		int dot = line.indexOf(".");
-		int minus = line.indexOf("-");
+		int minus = line.indexOf(" - ");
 		
 		String[] res = new String[3];
 		
 		res[0] = FileIO.cleanQuotes(line.substring(0, dot));
 		res[1] = FileIO.cleanQuotes(line.substring(dot + 1, minus));
-		res[2] = FileIO.cleanQuotes(line.substring(minus + 1));
+		res[2] = FileIO.cleanQuotes(line.substring(minus + 3));
 		
 		return res;
 	}

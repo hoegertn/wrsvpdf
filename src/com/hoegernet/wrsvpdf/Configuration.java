@@ -21,9 +21,9 @@ public interface Configuration {
 	/**  */
 	public final static int VERSION_MINOR = 2;
 	/**  */
-	public final static int VERSION_REVISION = 0;
+	public final static int VERSION_REVISION = 1;
 	/**  */
-	public final static String VERSION_RELEASE_DATE = "2008-07-20";
+	public final static String VERSION_RELEASE_DATE = "2008-08-17";
 	/**  */
 	public final static String VERSION_SVN_REVISION = "@SVN@";
 	/**  */

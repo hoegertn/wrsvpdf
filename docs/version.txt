@@ -1,3 +1,8 @@
+[build:2.2.1_2008-08-17]
+- teamlist: removes BRV
+- fixed team names with -
+- verified ruletext length
+
 [build:2.2.0_2008-07-20]
 - reports changed
 - code clean-up

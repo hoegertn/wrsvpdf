@@ -339,20 +339,6 @@
 				<text><![CDATA[gez. Wolfgang Jauch
 Fachwart Radball WRSV]]></text>
 				</staticText>
-				<staticText>
-					<reportElement
-						x="246"
-						y="210"
-						width="123"
-						height="23"
-						key="staticText-4"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
-					</textElement>
-				<text><![CDATA[gez. Klaus Holzer
-Fachwart Radball BRV]]></text>
-				</staticText>
 			</band>
 		</lastPageFooter>
 		<summary>
