@@ -210,7 +210,7 @@ public class Generator {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
 		
 		Map<String, String> parameters = new HashMap<String, String>();
-		parameters.put("year", tabelle.getYear());
+		parameters.put("title", tabelle.getYear());
 		parameters.put("staffelname", tabelle.getStaffel());
 		parameters.put("headline", tabelle.getHeadline());
 		parameters.put("datetime", sdf.format(new Date()));

@@ -256,8 +256,8 @@ public class FlatFileImport implements IFileImporter {
 			rank.setSpiele(fields[2]);
 			rank.setTore_pos(fields[3]);
 			rank.setTore_neg(fields[4]);
-			rank.setDiff(fields[5]);
-			rank.setPkt(fields[6]);
+			rank.setPkt(fields[5]);
+			rank.setDiff(fields[6]);
 			
 			ranks.add(rank);
 		}
