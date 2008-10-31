@@ -1,3 +1,7 @@
+[build:2.2.2_2008-10-31]
+- ranking: diff&pkt changed
+- ranking header fixed
+
 [build:2.2.1_2008-08-17]
 - teamlist: removes BRV
 - fixed team names with -
