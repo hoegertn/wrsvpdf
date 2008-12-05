@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Packaging Generator" default="dev" basedir="../">
 
+	<property file="${basedir}/ant/version.properties" />
+	
 	<property name="target" value="../../~wrsvpdf" />
 	<property name="loggingInstall" value="C:/DevelopmentTools/commons-logging-1.1.1" />
 	<property name="package" value="${target}/package" />
@@ -15,6 +17,7 @@
 		<include name="**/*.class" />
 	</fileset>
 
+	<!-- Libraries -->
 	<path id="LibPath">
 		<fileset id="LibDirectory" dir="${basedir}/lib/">
 			<include name="**/*.jar" />
@@ -28,10 +31,14 @@
 		<antcall target="-prepare" />
 		<antcall target="-copySrc" />
 		<antcall target="-compileAndJar" />
+		<antcall target="-package" />
 	</target>
 
 	<target name="int" description="Integration Build">
-
+		<getbuildnr buildnrproperty="build.number" />
+		
+		<echo>Building: ${version.major}.${version.minor}.${version.revision}_${version.date}#${build.number}</echo>
+		
 		<antcall target="-clean" />
 		<antcall target="-prepare" />
 		<antcall target="-copySrc" />
@@ -51,10 +58,8 @@
 			</exec>
 			<xmlproperty file="~getbuildnr.xml" collapseAttributes="true" />
 			<property name="@{buildnrproperty}" value="${info.entry.commit.revision}" />
-			<echo message="Verwende Build-Nummer: ${info.entry.commit.revision}" />
 			<delete file="~getbuildnr.xml" />
 		</sequential>
-
 	</macrodef>
 
 
@@ -72,7 +77,7 @@
 		<mkdir dir="${package}/images" />
 		<mkdir dir="${package}/reports" />
 
-		<record name="c:/wrsv_build.log" />
+		<record name="c:/Builds/wrsv_build.log" />
 
 	</target>
 
@@ -83,13 +88,15 @@
 	<target name="-copySrc" description="Vorbereitung und Initialisierung">
 
 		<!-- Installationsdatei erstellen -->
-		<getbuildnr buildnrproperty="build.number" />
-
 		<copy todir="${target}/src">
 			<fileset dir="${basedir}/src">
 				<include name="**/*.*" />
 			</fileset>
 			<filterset>
+				<filter token="MAJOR" value="${version.major}" />
+				<filter token="MINOR" value="${version.minor}" />
+				<filter token="REVISION" value="${version.revision}" />
+				<filter token="RELDATE" value="${version.date}" />
 				<filter token="SVN" value="${build.number}" />
 			</filterset>
 		</copy>
@@ -100,11 +107,45 @@
 	<!-- ==== Installationsdatei erstellen ==== -->
 	<target name="-compileAndJar" description="Erstellt die Development Builds">
 
+		<!-- create a property containing all .jar files, prefix lib/, and seperated with a space -->
+		<pathconvert property="libs.project" pathsep=" ">
+			<mapper>
+				<chainedmapper>
+
+					<!-- remove absolute path -->
+					<flattenmapper />
+
+					<!-- add lib/ prefix -->
+					<globmapper from="*" to="lib/*" />
+				</chainedmapper>
+			</mapper>
+			<path>
+				<!-- contains all jar files, in several subdirectories -->
+				<fileset dir="${basedir}/lib">
+					<include name="**/*.jar" />
+				</fileset>
+			</path>
+		</pathconvert>
+
 		<javac srcdir="${target}/src" destdir="${target}/bin" debug="true" debuglevel="lines,vars,source">
 			<classpath refid="LibPath" />
 		</javac>
 
-		<jar destfile="${target}/jar/com.hoegernet.wrsvpdf.jar" manifest="${basedir}/config/MANIFEST.MF">
+		<jar destfile="${target}/jar/com.hoegernet.wrsvpdf.jar">
+			<!-- define MANIFEST.MF -->
+			<manifest>
+				<attribute name="Built-By" value="Thorsten Hoeger" />
+				<attribute name="Built-Jdk" value="1.5.0" />
+				<attribute name="Main-Class" value="com.hoegernet.wrsvpdf.Starter" />
+				<attribute name="Specification-Title" value="WRSV PDF generator" />
+				<attribute name="Specification-Version" value="2.0.0" />
+				<attribute name="Specification-Vendor" value="Hoegernet" />
+				<attribute name="Implementation-Title" value="com.hoegernet.wrsvpdf" />
+				<attribute name="Implementation-Version" value="${version.major}.${version.minor}.${version.revision}_${version.date}#${build.number}" />
+				<attribute name="Implementation-Vendor" value="Hoegernet" />
+				<!-- finally, use the magically generated libs path -->
+				<attribute name="Class-Path" value="${libs.project}" />
+			</manifest>
 			<fileset refid="JavaBinary" />
 		</jar>
 

@@ -1,3 +1,6 @@
+[build:2.2.3_2008-12-05]
+- changing ANT creation
+
 [build:2.2.2_2008-10-31]
 - ranking: diff&pkt changed
 - ranking header fixed
@@ -26,5 +29,5 @@
 
 [build:2.0.0_2008-01-21]
 first binary build
-- new implemented with Java & SWT
+- new implemented in Java & SWT
 - JasperReports for Reporting

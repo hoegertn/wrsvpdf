@@ -17,13 +17,13 @@ import com.hoegernet.common.logger.ELogLevel;
 public interface Configuration {
 	
 	/**  */
-	public final static int VERSION_MAJOR = 2;
+	public final static String VERSION_MAJOR = "@MAJOR@";
 	/**  */
-	public final static int VERSION_MINOR = 2;
+	public final static String VERSION_MINOR = "@MINOR@";
 	/**  */
-	public final static int VERSION_REVISION = 2;
+	public final static String VERSION_REVISION = "@REVISION@";
 	/**  */
-	public final static String VERSION_RELEASE_DATE = "2008-10-31";
+	public final static String VERSION_RELEASE_DATE = "@RELDATE@";
 	/**  */
 	public final static String VERSION_SVN_REVISION = "@SVN@";
 	/**  */
