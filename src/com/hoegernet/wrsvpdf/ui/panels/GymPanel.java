@@ -15,7 +15,7 @@ import com.hoegernet.swt.bricks.buttons.FileSelectButtonBrick;
 import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 import com.hoegernet.wrsvpdf.fileio.FileIORegistry;
 import com.hoegernet.wrsvpdf.fileio.FileMemory;
-import com.hoegernet.wrsvpdf.reporting.Generator;
+import com.hoegernet.wrsvpdf.reporting.HallenReport;
 import com.hoegernet.wrsvpdf.types.Halle;
 import com.hoegernet.wrsvpdf.types.Staffel;
 import com.hoegernet.wrsvpdf.ui.GOButtonBrick;
@@ -63,7 +63,7 @@ public class GymPanel extends MainPanel {
 				
 				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(GymPanel.this.staffelText.getText());
 				Halle[] gyms = FileIORegistry.getImporter().loadHallenFromFile(GymPanel.this.gymText.getText());
-				return Generator.createHallenReport(staffel, gyms);
+				return HallenReport.createReport(staffel, gyms);
 			}
 		};
 	}

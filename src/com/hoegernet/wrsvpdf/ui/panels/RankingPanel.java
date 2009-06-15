@@ -14,7 +14,7 @@ import com.hoegernet.swt.bricks.TextFieldBrick;
 import com.hoegernet.swt.bricks.buttons.FileSelectButtonBrick;
 import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 import com.hoegernet.wrsvpdf.fileio.FileIORegistry;
-import com.hoegernet.wrsvpdf.reporting.Generator;
+import com.hoegernet.wrsvpdf.reporting.RankingReport;
 import com.hoegernet.wrsvpdf.types.Tabelle;
 import com.hoegernet.wrsvpdf.ui.GOButtonBrick;
 import com.hoegernet.wrsvpdf.ui.MainPanel;
@@ -51,7 +51,7 @@ public class RankingPanel extends MainPanel {
 			@Override
 			protected JasperPrint getReport() throws PdfGeneratorException {
 				Tabelle tabelle = FileIORegistry.getImporter().loadRankingFromFile(RankingPanel.this.rankingText.getText());
-				return Generator.createRankingReport(tabelle);
+				return RankingReport.createReport(tabelle);
 			}
 		};
 		

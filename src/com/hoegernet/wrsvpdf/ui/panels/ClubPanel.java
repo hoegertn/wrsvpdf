@@ -15,7 +15,7 @@ import com.hoegernet.swt.bricks.buttons.FileSelectButtonBrick;
 import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 import com.hoegernet.wrsvpdf.fileio.FileIORegistry;
 import com.hoegernet.wrsvpdf.fileio.FileMemory;
-import com.hoegernet.wrsvpdf.reporting.Generator;
+import com.hoegernet.wrsvpdf.reporting.ClubReport;
 import com.hoegernet.wrsvpdf.types.Staffel;
 import com.hoegernet.wrsvpdf.types.Verein;
 import com.hoegernet.wrsvpdf.ui.GOButtonBrick;
@@ -63,7 +63,7 @@ public class ClubPanel extends MainPanel {
 				
 				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(ClubPanel.this.staffelText.getText());
 				Verein[] clubs = FileIORegistry.getImporter().loadClubsFromFile(ClubPanel.this.clubText.getText());
-				return Generator.createClubReport(staffel, clubs);
+				return ClubReport.createReport(staffel, clubs);
 			}
 		};
 		

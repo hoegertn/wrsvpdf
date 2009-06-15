@@ -48,6 +48,8 @@ public interface Configuration {
 	/**  */
 	public final static String REPORT_REPORTING = Configuration.REPORT_DIRECTORY + File.separatorChar + "dayreport.jrxml";
 	/**  */
+	public final static String REPORT_RULES = Configuration.REPORT_DIRECTORY + File.separatorChar + "rules.jrxml";
+	/**  */
 	public final static String REPORT_GYM = Configuration.REPORT_DIRECTORY + File.separatorChar + "gymlist.jrxml";
 	/**  */
 	public final static String REPORT_RANKING = Configuration.REPORT_DIRECTORY + File.separatorChar + "ranking.jrxml";

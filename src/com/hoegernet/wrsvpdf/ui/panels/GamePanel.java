@@ -16,7 +16,7 @@ import com.hoegernet.swt.bricks.buttons.FileSelectButtonBrick;
 import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 import com.hoegernet.wrsvpdf.fileio.FileIORegistry;
 import com.hoegernet.wrsvpdf.fileio.FileMemory;
-import com.hoegernet.wrsvpdf.reporting.Generator;
+import com.hoegernet.wrsvpdf.reporting.SpieltagReport;
 import com.hoegernet.wrsvpdf.types.Spieltag;
 import com.hoegernet.wrsvpdf.types.Staffel;
 import com.hoegernet.wrsvpdf.types.Team;
@@ -78,7 +78,7 @@ public class GamePanel extends MainPanel {
 				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(GamePanel.this.staffelText.getText());
 				Spieltag game = FileIORegistry.getImporter().loadSpieltagFromFile(GamePanel.this.gameText.getText());
 				Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(GamePanel.this.teamText.getText());
-				return Generator.createSpieltagReport(staffel, game, teams, GamePanel.this.chkReport.getSelection());
+				return SpieltagReport.createReport(staffel, game, teams, GamePanel.this.chkReport.getSelection());
 			}
 		};
 		

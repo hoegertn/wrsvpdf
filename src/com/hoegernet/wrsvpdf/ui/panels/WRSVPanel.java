@@ -15,7 +15,7 @@ import com.hoegernet.swt.bricks.buttons.FileSelectButtonBrick;
 import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 import com.hoegernet.wrsvpdf.fileio.FileIORegistry;
 import com.hoegernet.wrsvpdf.fileio.FileMemory;
-import com.hoegernet.wrsvpdf.reporting.Generator;
+import com.hoegernet.wrsvpdf.reporting.WRSVReport;
 import com.hoegernet.wrsvpdf.types.Staffel;
 import com.hoegernet.wrsvpdf.types.WRSVPerson;
 import com.hoegernet.wrsvpdf.ui.GOButtonBrick;
@@ -57,7 +57,7 @@ public class WRSVPanel extends MainPanel {
 				
 				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(WRSVPanel.this.staffelText.getText());
 				WRSVPerson[] personen = FileIORegistry.getImporter().loadWRSVPersonenFromFile("wrsv.ini");
-				return Generator.createWRSVReport(staffel, personen);
+				return WRSVReport.createReport(staffel, personen);
 			}
 		};
 	}
