@@ -27,15 +27,15 @@ public class RulesReport extends AbstractGenerator {
 	 * @return Report
 	 * @throws PdfGeneratorException
 	 */
-	public static JasperPrint createReport(Staffel staffel) throws PdfGeneratorException {
+	public static JasperPrint createReport(final Staffel staffel) throws PdfGeneratorException {
 		AbstractGenerator.assertNull(staffel, "Staffel mustn't be null");
 		
-		Map<String, String> parameters = new HashMap<String, String>();
+		final Map<String, String> parameters = new HashMap<String, String>();
 		parameters.put("title", staffel.getTitle());
 		parameters.put("staffelname", staffel.getName());
 		parameters.put("regeln", staffel.getRegelungen().replaceAll("[ ]{2,}", " "));
 		
-		return AbstractGenerator.print(Configuration.REPORT_RULES, parameters, new Vector<Object[]>(), new String[0]);
+		return AbstractGenerator.print(Configuration.REPORT_RULES, parameters, new Vector<Object[]>(), new String[0], (staffel.getTitle().length() > Configuration.MAX_TITLE_LENGTH));
 	}
 	
 }

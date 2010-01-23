@@ -31,33 +31,33 @@ public class ReportingReport extends AbstractGenerator {
 	 * @return Report
 	 * @throws PdfGeneratorException
 	 */
-	public static JasperPrint createReport(Staffel staffel, Spieltag tag, Team[] teams) throws PdfGeneratorException {
+	public static JasperPrint createReport(final Staffel staffel, final Spieltag tag, final Team[] teams) throws PdfGeneratorException {
 		AbstractGenerator.assertNull(staffel, "Staffel mustn't be null");
 		AbstractGenerator.assertNull(tag, "Tag mustn't be null");
 		
-		Vector<Object[]> vecjas = new Vector<Object[]>();
+		final Vector<Object[]> vecjas = new Vector<Object[]>();
 		
 		Arrays.sort(teams, new Comparator<Team>() {
 			
-			public int compare(Team o1, Team o2) {
+			public int compare(final Team o1, final Team o2) {
 				return o1.getName().compareTo(o2.getName());
 			}
 		});
 		
-		for (Team t : teams) {
-			String[] arr = new String[] {t.getName(), t.getPlayer1(), t.getPlayer2()};
+		for (final Team t : teams) {
+			final String[] arr = new String[] {t.getName(), t.getPlayer1(), t.getPlayer2()};
 			vecjas.add(arr);
 		}
 		
-		String[] columns = new String[] {"teamname", "player1", "player2"};
+		final String[] columns = new String[] {"teamname", "player1", "player2"};
 		
-		Map<String, String> parameters = new HashMap<String, String>();
+		final Map<String, String> parameters = new HashMap<String, String>();
 		parameters.put("title", staffel.getTitle());
 		parameters.put("staffelname", staffel.getName());
 		parameters.put("header", tag.getTitle());
 		parameters.put("ort", tag.getOrt());
 		
-		return AbstractGenerator.print(Configuration.REPORT_REPORTING, parameters, vecjas, columns);
+		return AbstractGenerator.print(Configuration.REPORT_REPORTING, parameters, vecjas, columns, (staffel.getTitle().length() > Configuration.MAX_TITLE_LENGTH));
 	}
 	
 }

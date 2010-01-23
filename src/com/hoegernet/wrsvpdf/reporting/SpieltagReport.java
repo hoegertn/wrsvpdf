@@ -32,21 +32,21 @@ public class SpieltagReport extends AbstractGenerator {
 	 * @return Report
 	 * @throws PdfGeneratorException
 	 */
-	public static JasperPrint createReport(Staffel staffel, Spieltag tag, Team[] teams, boolean reporting) throws PdfGeneratorException {
+	public static JasperPrint createReport(final Staffel staffel, final Spieltag tag, final Team[] teams, final boolean reporting) throws PdfGeneratorException {
 		AbstractGenerator.assertNull(staffel, "Staffel mustn't be null");
 		AbstractGenerator.assertNull(tag, "Tag mustn't be null");
 		
-		Vector<Object[]> vecjas = new Vector<Object[]>();
+		final Vector<Object[]> vecjas = new Vector<Object[]>();
 		
-		List<String[]> games = tag.getGames();
+		final List<String[]> games = tag.getGames();
 		
-		for (String[] g : games) {
+		for (final String[] g : games) {
 			vecjas.add(g);
 		}
 		
-		String[] columns = new String[] {"number", "team1", "team2"};
+		final String[] columns = new String[] {"number", "team1", "team2"};
 		
-		Map<String, String> parameters = new HashMap<String, String>();
+		final Map<String, String> parameters = new HashMap<String, String>();
 		parameters.put("title", staffel.getTitle());
 		parameters.put("staffelname", staffel.getName());
 		parameters.put("headline", tag.getTitle());
@@ -58,9 +58,9 @@ public class SpieltagReport extends AbstractGenerator {
 		parameters.put("telefon", tag.getHalle_tel());
 		
 		String teamsLine = "";
-		List<Team> actualTeams = new ArrayList<Team>();
+		final List<Team> actualTeams = new ArrayList<Team>();
 		int len = 0;
-		for (String team : tag.getTeams()) {
+		for (final String team : tag.getTeams()) {
 			actualTeams.add(SpieltagReport.getTeamFromName(teams, team));
 			teamsLine += team + ", ";
 			len += team.length() + 2;
@@ -73,7 +73,7 @@ public class SpieltagReport extends AbstractGenerator {
 		
 		parameters.put("teams", teamsLine);
 		
-		JasperPrint jprint = AbstractGenerator.print(Configuration.REPORT_SPIELTAG, parameters, vecjas, columns);
+		final JasperPrint jprint = AbstractGenerator.print(Configuration.REPORT_SPIELTAG, parameters, vecjas, columns, (staffel.getTitle().length() > Configuration.MAX_TITLE_LENGTH));
 		jprint.setName(tag.getTitle());
 		
 		if (reporting) {
@@ -82,8 +82,8 @@ public class SpieltagReport extends AbstractGenerator {
 		return jprint;
 	}
 	
-	private static Team getTeamFromName(Team[] teams, String name) throws PdfGeneratorException {
-		for (Team team : teams) {
+	private static Team getTeamFromName(final Team[] teams, final String name) throws PdfGeneratorException {
+		for (final Team team : teams) {
 			if (team.getName().equals(name)) {
 				return team;
 			}

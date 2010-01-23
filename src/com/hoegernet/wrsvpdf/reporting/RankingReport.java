@@ -27,25 +27,25 @@ public class RankingReport extends AbstractGenerator {
 	 * @return Report
 	 * @throws PdfGeneratorException
 	 */
-	public static JasperPrint createReport(Tabelle tabelle) throws PdfGeneratorException {
+	public static JasperPrint createReport(final Tabelle tabelle) throws PdfGeneratorException {
 		AbstractGenerator.assertNull(tabelle, "Tabelle mustn't be null");
 		
-		Vector<Object[]> vecjas = new Vector<Object[]>();
+		final Vector<Object[]> vecjas = new Vector<Object[]>();
 		
-		List<RankingPos> ranks = tabelle.getTable();
+		final List<RankingPos> ranks = tabelle.getTable();
 		
-		for (RankingPos r : ranks) {
+		for (final RankingPos r : ranks) {
 			vecjas.add(new String[] {r.getPos(), r.getName(), r.getSpiele(), r.getTore_pos(), r.getTore_neg(), r.getDiff(), r.getPkt()});
 		}
 		
-		String[] columns = new String[] {"platz", "name", "spiele", "tore_pos", "tore_neg", "diff", "pkt"};
+		final String[] columns = new String[] {"platz", "name", "spiele", "tore_pos", "tore_neg", "diff", "pkt"};
 		
-		Map<String, String> parameters = new HashMap<String, String>();
+		final Map<String, String> parameters = new HashMap<String, String>();
 		parameters.put("title", tabelle.getYear());
 		parameters.put("staffelname", tabelle.getStaffel());
 		parameters.put("headline", tabelle.getHeadline());
 		
-		return AbstractGenerator.print(Configuration.REPORT_RANKING, parameters, vecjas, columns);
+		return AbstractGenerator.print(Configuration.REPORT_RANKING, parameters, vecjas, columns, (tabelle.getStaffel().length() > Configuration.MAX_TITLE_LENGTH));
 	}
 	
 }

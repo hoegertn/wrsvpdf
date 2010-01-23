@@ -25,55 +25,42 @@ import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
  */
 public abstract class AbstractGenerator {
 	
-	/**
-	 * @param o - assert that o is not null
-	 * @param message - message to throw
-	 * @throws com.hoegernet.wrsvpdf.exceptions.IllegalArgumentException
-	 */
-	protected static void assertNull(Object o, String message) throws com.hoegernet.wrsvpdf.exceptions.IllegalArgumentException {
+	protected static void assertNull(final Object o, final String message) throws com.hoegernet.wrsvpdf.exceptions.IllegalArgumentException {
 		if (o == null) {
 			throw new com.hoegernet.wrsvpdf.exceptions.IllegalArgumentException(message);
 		}
 	}
 	
-	/**
-	 * @param o - String to check
-	 * @param message - message to throw
-	 * @throws com.hoegernet.wrsvpdf.exceptions.IllegalArgumentException
-	 */
-	protected static void assertEmpty(String o, String message) throws com.hoegernet.wrsvpdf.exceptions.IllegalArgumentException {
+	protected static void assertEmpty(final String o, final String message) throws com.hoegernet.wrsvpdf.exceptions.IllegalArgumentException {
 		AbstractGenerator.assertEmpty(o, message);
 		if (o.isEmpty()) {
 			throw new com.hoegernet.wrsvpdf.exceptions.IllegalArgumentException(message);
 		}
 	}
 	
-	/**
-	 * @param fileName
-	 * @param parameters
-	 * @param vecjas
-	 * @param columns
-	 * @return JasperPrint
-	 * @throws PdfGeneratorException
-	 */
-	protected static JasperPrint print(String fileName, Map<String, String> parameters, Vector<Object[]> vecjas, String[] columns) throws PdfGeneratorException {
+	protected static JasperPrint print(final String fileName, final Map<String, String> parameters, final Vector<Object[]> vecjas, final String[] columns, final boolean large) throws PdfGeneratorException {
 		JasperReport jr;
 		JasperPrint jprint = null;
 		try {
 			parameters.put("writerVersion", Configuration.VERSION_FULL);
 			parameters.put("datetime", new SimpleDateFormat("dd.MM.yyyy HH:mm").format(new Date()));
 			
-			jr = JasperCompileManager.compileReport(fileName);
+			if (large) {
+				jr = JasperCompileManager.compileReport(fileName + "_large.jrxml");
+			} else {
+				jr = JasperCompileManager.compileReport(fileName + ".jrxml");
+			}
+			
 			jprint = JasperFillManager.fillReport(jr, parameters, new HoegernetDataSource(vecjas, columns));
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			throw new PdfGeneratorException(ex);
 		}
 		
 		return jprint;
 	}
 	
-	protected static void concatReport(JasperPrint master, JasperPrint extarReport) {
-		for (Object obj : extarReport.getPages()) {
+	protected static void concatReport(final JasperPrint master, final JasperPrint extarReport) {
+		for (final Object obj : extarReport.getPages()) {
 			if (obj instanceof JRPrintPage) {
 				master.addPage((JRPrintPage) obj);
 			}

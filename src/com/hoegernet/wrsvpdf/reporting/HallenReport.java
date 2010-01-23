@@ -27,23 +27,23 @@ public class HallenReport extends AbstractGenerator {
 	 * @return Report
 	 * @throws PdfGeneratorException
 	 */
-	public static JasperPrint createReport(Staffel staffel, Halle[] hallen) throws PdfGeneratorException {
+	public static JasperPrint createReport(final Staffel staffel, final Halle[] hallen) throws PdfGeneratorException {
 		AbstractGenerator.assertNull(staffel, "Staffel mustn't be null");
 		
-		Vector<Object[]> vecjas = new Vector<Object[]>();
+		final Vector<Object[]> vecjas = new Vector<Object[]>();
 		
-		for (Halle h : hallen) {
+		for (final Halle h : hallen) {
 			vecjas.add(new String[] {h.getName(), h.getStrasse(), h.getOrt(), h.getTel(), h.getVerein()});
 		}
 		
-		String[] columns = new String[] {"name", "strasse", "ort", "tel", "verein"};
+		final String[] columns = new String[] {"name", "strasse", "ort", "tel", "verein"};
 		
-		Map<String, String> parameters = new HashMap<String, String>();
+		final Map<String, String> parameters = new HashMap<String, String>();
 		parameters.put("writerVersion", Configuration.VERSION_FULL);
 		parameters.put("title", staffel.getTitle());
 		parameters.put("staffelname", staffel.getName());
 		
-		return AbstractGenerator.print(Configuration.REPORT_GYM, parameters, vecjas, columns);
+		return AbstractGenerator.print(Configuration.REPORT_GYM, parameters, vecjas, columns, (staffel.getTitle().length() > Configuration.MAX_TITLE_LENGTH));
 	}
 	
 }

@@ -27,22 +27,22 @@ public class ClubReport extends AbstractGenerator {
 	 * @return Report
 	 * @throws PdfGeneratorException
 	 */
-	public static JasperPrint createReport(Staffel staffel, Verein[] vereine) throws PdfGeneratorException {
+	public static JasperPrint createReport(final Staffel staffel, final Verein[] vereine) throws PdfGeneratorException {
 		AbstractGenerator.assertNull(staffel, "Staffel mustn't be null");
 		
-		Vector<Object[]> vecjas = new Vector<Object[]>();
+		final Vector<Object[]> vecjas = new Vector<Object[]>();
 		
-		for (Verein v : vereine) {
+		for (final Verein v : vereine) {
 			vecjas.add(new String[] {v.getName(), v.getPerson(), v.getStrasse(), v.getOrt(), v.getTel(), v.getFax(), v.getMail()});
 		}
 		
-		String[] columns = new String[] {"name", "person", "strasse", "ort", "telefon", "telefax", "email"};
+		final String[] columns = new String[] {"name", "person", "strasse", "ort", "telefon", "telefax", "email"};
 		
-		Map<String, String> parameters = new HashMap<String, String>();
+		final Map<String, String> parameters = new HashMap<String, String>();
 		parameters.put("title", staffel.getTitle());
 		parameters.put("staffelname", staffel.getName());
 		
-		return AbstractGenerator.print(Configuration.REPORT_CLUB, parameters, vecjas, columns);
+		return AbstractGenerator.print(Configuration.REPORT_CLUB, parameters, vecjas, columns, (staffel.getTitle().length() > Configuration.MAX_TITLE_LENGTH));
 	}
 	
 }
