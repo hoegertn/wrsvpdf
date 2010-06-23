@@ -21,7 +21,7 @@ public class ParseException extends PdfGeneratorException {
 	 * 
 	 * @param message - Exception description
 	 */
-	public ParseException(String message) {
+	public ParseException(final String message) {
 		super(message);
 	}
 	
@@ -31,7 +31,7 @@ public class ParseException extends PdfGeneratorException {
 	 * @param message - Exception description
 	 * @param cause - Root Cause of this exception
 	 */
-	public ParseException(String message, Throwable cause) {
+	public ParseException(final String message, final Throwable cause) {
 		super(message, cause);
 	}
 	

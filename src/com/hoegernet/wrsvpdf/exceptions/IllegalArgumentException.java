@@ -21,7 +21,7 @@ public class IllegalArgumentException extends PdfGeneratorException {
 	 * 
 	 * @param message - Exception description
 	 */
-	public IllegalArgumentException(String message) {
+	public IllegalArgumentException(final String message) {
 		super(message);
 	}
 }

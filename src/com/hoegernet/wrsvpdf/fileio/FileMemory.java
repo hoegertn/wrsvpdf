@@ -46,7 +46,7 @@ public class FileMemory {
 	/**
 	 * @param staffelFile
 	 */
-	public void setStaffelFile(String staffelFile) {
+	public void setStaffelFile(final String staffelFile) {
 		this.staffelFile = staffelFile;
 	}
 	

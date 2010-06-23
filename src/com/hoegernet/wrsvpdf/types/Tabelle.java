@@ -41,7 +41,7 @@ public class Tabelle {
 	/**
 	 * @param year the year to set
 	 */
-	public void setYear(String year) {
+	public void setYear(final String year) {
 		this.year = year;
 	}
 	
@@ -55,7 +55,7 @@ public class Tabelle {
 	/**
 	 * @param staffel the staffel to set
 	 */
-	public void setStaffel(String staffel) {
+	public void setStaffel(final String staffel) {
 		this.staffel = staffel;
 	}
 	
@@ -69,7 +69,7 @@ public class Tabelle {
 	/**
 	 * @param headline the headline to set
 	 */
-	public void setHeadline(String headline) {
+	public void setHeadline(final String headline) {
 		this.headline = headline;
 	}
 	
@@ -83,7 +83,7 @@ public class Tabelle {
 	/**
 	 * @param table the table to set
 	 */
-	public void setTable(List<RankingPos> table) {
+	public void setTable(final List<RankingPos> table) {
 		this.table = table;
 	}
 	

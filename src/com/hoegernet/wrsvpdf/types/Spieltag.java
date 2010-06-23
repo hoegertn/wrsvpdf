@@ -47,7 +47,7 @@ public class Spieltag {
 	/**
 	 * @param title the title to set
 	 */
-	public void setTitle(String title) {
+	public void setTitle(final String title) {
 		this.title = title;
 	}
 	
@@ -61,7 +61,7 @@ public class Spieltag {
 	/**
 	 * @param datum the datum to set
 	 */
-	public void setDatum(String datum) {
+	public void setDatum(final String datum) {
 		this.datum = datum;
 	}
 	
@@ -75,7 +75,7 @@ public class Spieltag {
 	/**
 	 * @param zeit the zeit to set
 	 */
-	public void setZeit(String zeit) {
+	public void setZeit(final String zeit) {
 		this.zeit = zeit;
 	}
 	
@@ -89,7 +89,7 @@ public class Spieltag {
 	/**
 	 * @param ort the ort to set
 	 */
-	public void setOrt(String ort) {
+	public void setOrt(final String ort) {
 		this.ort = ort;
 	}
 	
@@ -103,7 +103,7 @@ public class Spieltag {
 	/**
 	 * @param halle_name the halle_name to set
 	 */
-	public void setHalle_name(String halle_name) {
+	public void setHalle_name(final String halle_name) {
 		this.halle_name = halle_name;
 	}
 	
@@ -117,7 +117,7 @@ public class Spieltag {
 	/**
 	 * @param halle_ort the halle_ort to set
 	 */
-	public void setHalle_ort(String halle_ort) {
+	public void setHalle_ort(final String halle_ort) {
 		this.halle_ort = halle_ort;
 	}
 	
@@ -131,7 +131,7 @@ public class Spieltag {
 	/**
 	 * @param halle_strasse the halle_strasse to set
 	 */
-	public void setHalle_strasse(String halle_strasse) {
+	public void setHalle_strasse(final String halle_strasse) {
 		this.halle_strasse = halle_strasse;
 	}
 	
@@ -145,7 +145,7 @@ public class Spieltag {
 	/**
 	 * @param halle_tel the halle_tel to set
 	 */
-	public void setHalle_tel(String halle_tel) {
+	public void setHalle_tel(final String halle_tel) {
 		this.halle_tel = halle_tel;
 	}
 	
@@ -159,7 +159,7 @@ public class Spieltag {
 	/**
 	 * @param teams the teams to set
 	 */
-	public void setTeams(List<String> teams) {
+	public void setTeams(final List<String> teams) {
 		this.teams = teams;
 	}
 	
@@ -173,7 +173,7 @@ public class Spieltag {
 	/**
 	 * @param games the games to set
 	 */
-	public void setGames(List<String[]> games) {
+	public void setGames(final List<String[]> games) {
 		this.games = games;
 	}
 	

@@ -23,7 +23,7 @@ public class Starter {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Logger.getInstance().addFileLogger(Configuration.LOG_FILENAME, true);
 		Logger.getInstance().redirectSysout();
 		Logger.getInstance().redirectSyserr();

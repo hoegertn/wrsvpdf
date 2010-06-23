@@ -36,7 +36,7 @@ public class Halle {
 	/**
 	 * @param verein the verein to set
 	 */
-	public void setVerein(String verein) {
+	public void setVerein(final String verein) {
 		this.verein = verein;
 	}
 	
@@ -50,7 +50,7 @@ public class Halle {
 	/**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 	
@@ -64,7 +64,7 @@ public class Halle {
 	/**
 	 * @param strasse the strasse to set
 	 */
-	public void setStrasse(String strasse) {
+	public void setStrasse(final String strasse) {
 		this.strasse = strasse;
 	}
 	
@@ -78,7 +78,7 @@ public class Halle {
 	/**
 	 * @param ort the ort to set
 	 */
-	public void setOrt(String ort) {
+	public void setOrt(final String ort) {
 		this.ort = ort;
 	}
 	
@@ -92,7 +92,7 @@ public class Halle {
 	/**
 	 * @param tel the tel to set
 	 */
-	public void setTel(String tel) {
+	public void setTel(final String tel) {
 		this.tel = tel;
 	}
 	

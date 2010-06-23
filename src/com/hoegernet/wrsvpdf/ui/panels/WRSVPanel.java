@@ -37,12 +37,12 @@ public class WRSVPanel extends MainPanel {
 	 * @param style
 	 * @param formstyle
 	 */
-	public WRSVPanel(Composite parent, int style, int formstyle) {
+	public WRSVPanel(final Composite parent, final int style, final int formstyle) {
 		super(parent, style, formstyle);
 	}
 	
 	@Override
-	protected void createPanelContents(Composite parent) {
+	protected void createPanelContents(final Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Staffel auswählen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
@@ -55,8 +55,8 @@ public class WRSVPanel extends MainPanel {
 			protected JasperPrint getReport() throws PdfGeneratorException {
 				FileMemory.getInstance().setStaffelFile(WRSVPanel.this.staffelText.getText());
 				
-				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(WRSVPanel.this.staffelText.getText());
-				WRSVPerson[] personen = FileIORegistry.getImporter().loadWRSVPersonenFromFile("wrsv.ini");
+				final Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(WRSVPanel.this.staffelText.getText());
+				final WRSVPerson[] personen = FileIORegistry.getImporter().loadWRSVPersonenFromFile("wrsv.ini");
 				return WRSVReport.createReport(staffel, personen);
 			}
 		};

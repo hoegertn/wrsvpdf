@@ -28,20 +28,20 @@ import com.hoegernet.wrsvpdf.types.WRSVPerson;
  */
 public class FlatFileImport implements IFileImporter {
 	
-	public Staffel loadStaffelFromFile(String filename) throws PdfGeneratorException {
+	public Staffel loadStaffelFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Staffel from file: " + filename);
-		Staffel staffel = new Staffel();
+		final Staffel staffel = new Staffel();
 		
-		String[] lines = FileIO.getLinesFromFile(filename);
+		final String[] lines = FileIO.getLinesFromFile(filename);
 		if (lines.length < 2) {
 			throw new ParseException("Wrong line count in file: " + filename);
 		}
 		
-		String[] firstline = FileIO.getFieldsFromLine(lines[0]);
+		final String[] firstline = FileIO.getFieldsFromLine(lines[0]);
 		staffel.setTitle(firstline[0]);
 		staffel.setName(firstline[1]);
 		
-		String[] person = FileIO.getFieldsFromLine(lines[1]);
+		final String[] person = FileIO.getFieldsFromLine(lines[1]);
 		staffel.setStaffelleiter_name(person[0]);
 		staffel.setStaffelleiter_strasse(person[1]);
 		staffel.setStaffelleiter_telfax(person[2]);
@@ -57,14 +57,14 @@ public class FlatFileImport implements IFileImporter {
 		return staffel;
 	}
 	
-	public Halle[] loadHallenFromFile(String filename) throws PdfGeneratorException {
+	public Halle[] loadHallenFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Hallen from file: " + filename);
-		String[] lines = FileIO.getLinesFromFile(filename);
-		Halle[] hallen = new Halle[lines.length];
+		final String[] lines = FileIO.getLinesFromFile(filename);
+		final Halle[] hallen = new Halle[lines.length];
 		
 		for (int i = 0; i < hallen.length; i++) {
-			Halle h = new Halle();
-			String[] l = FileIO.getFieldsFromLine(lines[i]);
+			final Halle h = new Halle();
+			final String[] l = FileIO.getFieldsFromLine(lines[i]);
 			
 			if (l.length != 5) {
 				throw new ParseException("Wrong field count in file: " + filename + " at line: " + lines[i]);
@@ -83,15 +83,15 @@ public class FlatFileImport implements IFileImporter {
 		return hallen;
 	}
 	
-	public Team[] loadTeamsFromFile(String filename) throws PdfGeneratorException {
+	public Team[] loadTeamsFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Teams from file: " + filename);
 		
-		String[] lines = FileIO.getLinesFromFile(filename);
-		Team[] teams = new Team[lines.length];
+		final String[] lines = FileIO.getLinesFromFile(filename);
+		final Team[] teams = new Team[lines.length];
 		
 		for (int i = 0; i < teams.length; i++) {
-			Team t = new Team();
-			String[] l = FileIO.getFieldsFromLine(lines[i]);
+			final Team t = new Team();
+			final String[] l = FileIO.getFieldsFromLine(lines[i]);
 			
 			if (l.length != 5) {
 				throw new ParseException("Wrong field count in file: " + filename + " at line: " + lines[i]);
@@ -110,15 +110,15 @@ public class FlatFileImport implements IFileImporter {
 		return teams;
 	}
 	
-	public Verein[] loadClubsFromFile(String filename) throws PdfGeneratorException {
+	public Verein[] loadClubsFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Clubs from file: " + filename);
 		
-		String[] lines = FileIO.getLinesFromFile(filename);
-		Verein[] clubs = new Verein[lines.length];
+		final String[] lines = FileIO.getLinesFromFile(filename);
+		final Verein[] clubs = new Verein[lines.length];
 		
 		for (int i = 0; i < clubs.length; i++) {
-			Verein v = new Verein();
-			String[] l = FileIO.getFieldsFromLine(lines[i]);
+			final Verein v = new Verein();
+			final String[] l = FileIO.getFieldsFromLine(lines[i]);
 			
 			if (l.length != 7) {
 				throw new ParseException("Wrong field count in file: " + filename + " at line: " + lines[i]);
@@ -139,22 +139,22 @@ public class FlatFileImport implements IFileImporter {
 		return clubs;
 	}
 	
-	public Spieltag loadSpieltagFromFile(String filename) throws PdfGeneratorException {
+	public Spieltag loadSpieltagFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Spieltag from file: " + filename);
 		
-		String[] lines = FileIO.getLinesFromFile(filename);
+		final String[] lines = FileIO.getLinesFromFile(filename);
 		if (lines.length < 4) {
 			throw new ParseException("Wrong field count in file: " + filename);
 		}
 		
-		Spieltag tag = new Spieltag();
+		final Spieltag tag = new Spieltag();
 		
 		tag.setTitle(FileIO.cleanQuotes(lines[0]));
 		tag.setDatum(FileIO.cleanQuotes(lines[1]));
 		tag.setZeit(FileIO.cleanQuotes(lines[2]));
 		tag.setOrt(FileIO.cleanQuotes(lines[3]));
 		
-		String[] halle = FileIO.getFieldsFromLine(lines[4]);
+		final String[] halle = FileIO.getFieldsFromLine(lines[4]);
 		if (halle.length != 4) {
 			throw new ParseException("Wrong field count in file: " + filename);
 		}
@@ -165,9 +165,9 @@ public class FlatFileImport implements IFileImporter {
 		tag.setHalle_tel(halle[3]);
 		
 		int index = 5;
-		List<String> teams = new ArrayList<String>();
+		final List<String> teams = new ArrayList<String>();
 		while (!lines[index].equals("<Spielfolge>")) {
-			String t = FileIO.cleanQuotes(lines[index]);
+			final String t = FileIO.cleanQuotes(lines[index]);
 			if (!t.equals("")) {
 				teams.add(t);
 			}
@@ -178,9 +178,9 @@ public class FlatFileImport implements IFileImporter {
 		
 		index++;
 		
-		List<String[]> games = new ArrayList<String[]>();
+		final List<String[]> games = new ArrayList<String[]>();
 		for (int i = index; i < lines.length; i++) {
-			games.add(FileIO.getSpielFromLine(FileIO.cleanQuotes(lines[i])));
+			games.add(FileIO.getSpielFromLine(lines[i]));
 		}
 		
 		tag.setGames(games);
@@ -190,15 +190,15 @@ public class FlatFileImport implements IFileImporter {
 		return tag;
 	}
 	
-	public WRSVPerson[] loadWRSVPersonenFromFile(String filename) throws PdfGeneratorException {
+	public WRSVPerson[] loadWRSVPersonenFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading WRSV from file: " + filename);
 		
-		String[] lines = FileIO.getLinesFromFile(filename);
-		List<WRSVPerson> pers = new ArrayList<WRSVPerson>();
+		final String[] lines = FileIO.getLinesFromFile(filename);
+		final List<WRSVPerson> pers = new ArrayList<WRSVPerson>();
 		
-		for (String lin : lines) {
-			WRSVPerson p = new WRSVPerson();
-			String[] fields = FileIO.getFieldsFromLine(lin);
+		for (final String lin : lines) {
+			final WRSVPerson p = new WRSVPerson();
+			final String[] fields = FileIO.getFieldsFromLine(lin);
 			if (fields.length != 7) {
 				throw new ParseException("Wrong field count in file: " + filename + " at line: " + lin);
 			}
@@ -218,17 +218,17 @@ public class FlatFileImport implements IFileImporter {
 		return pers.toArray(new WRSVPerson[lines.length]);
 	}
 	
-	public Tabelle loadRankingFromFile(String filename) throws PdfGeneratorException {
+	public Tabelle loadRankingFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Ranking from file: " + filename);
 		
-		String[] lines = FileIO.getLinesFromFile(filename);
+		final String[] lines = FileIO.getLinesFromFile(filename);
 		if (lines.length < 3) {
 			throw new ParseException("Wrong field count in file: " + filename);
 		}
 		
-		Tabelle tab = new Tabelle();
+		final Tabelle tab = new Tabelle();
 		
-		String[] line1 = FileIO.getFieldsFromLine(lines[0]);
+		final String[] line1 = FileIO.getFieldsFromLine(lines[0]);
 		if (line1.length != 2) {
 			throw new ParseException("Wrong field count in file: " + filename);
 		}
@@ -241,12 +241,12 @@ public class FlatFileImport implements IFileImporter {
 			return null;
 		}
 		
-		List<RankingPos> ranks = new ArrayList<RankingPos>();
+		final List<RankingPos> ranks = new ArrayList<RankingPos>();
 		
 		for (int i = 3; i < lines.length; i++) {
-			RankingPos rank = new RankingPos();
+			final RankingPos rank = new RankingPos();
 			
-			String[] fields = FileIO.getFieldsFromLineWithoutQuotes(lines[i]);
+			final String[] fields = FileIO.getFieldsFromLineWithoutQuotes(lines[i]);
 			if (fields.length != 7) {
 				throw new ParseException("Wrong field count in file: " + filename + " at line: " + lines[i]);
 			}

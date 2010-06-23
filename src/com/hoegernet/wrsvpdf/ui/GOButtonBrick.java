@@ -34,21 +34,21 @@ public abstract class GOButtonBrick extends PushButtonBrick {
 	 * @param label
 	 * @param defName
 	 */
-	public GOButtonBrick(Composite parent, String label, final String defName) {
+	public GOButtonBrick(final Composite parent, final String label, final String defName) {
 		super(parent, label);
 		this.addSelectionListener(new SelectionListener() {
 			
-			public void widgetDefaultSelected(SelectionEvent e) {
+			public void widgetDefaultSelected(final SelectionEvent e) {
 				//
 			}
 			
-			public void widgetSelected(SelectionEvent e) {
-				FileDialog dialog = new FileDialog(GOButtonBrick.this.getShell(), SWT.SAVE);
+			public void widgetSelected(final SelectionEvent e) {
+				final FileDialog dialog = new FileDialog(GOButtonBrick.this.getShell(), SWT.SAVE);
 				dialog.setFileName(defName);
-				String file = dialog.open();
+				final String file = dialog.open();
 				if (file != null) {
 					if (new File(file).exists()) {
-						MessageBox msg = new MessageBox(GOButtonBrick.this.getShell(), SWT.ICON_QUESTION | SWT.YES | SWT.NO);
+						final MessageBox msg = new MessageBox(GOButtonBrick.this.getShell(), SWT.ICON_QUESTION | SWT.YES | SWT.NO);
 						msg.setText("Warnung");
 						msg.setMessage("Datei existiert bereits! Überschreiben?");
 						
@@ -66,7 +66,7 @@ public abstract class GOButtonBrick extends PushButtonBrick {
 	 * @param parent
 	 * @param defName
 	 */
-	public GOButtonBrick(Composite parent, String defName) {
+	public GOButtonBrick(final Composite parent, final String defName) {
 		this(parent, "", defName);
 		this.setImage(new Image(null, "images" + File.separatorChar + "go.jpg"));
 	}
@@ -80,7 +80,7 @@ public abstract class GOButtonBrick extends PushButtonBrick {
 	 * @param fileName
 	 */
 	public void createReport(final String fileName) {
-		Runnable job = new Runnable() {
+		final Runnable job = new Runnable() {
 			
 			public void run() {
 				Logger.getInstance().logInfo("FileOutput", "Writing WRSV report to file: " + fileName);
@@ -88,15 +88,15 @@ public abstract class GOButtonBrick extends PushButtonBrick {
 					JasperExportManager.exportReportToPdfFile(GOButtonBrick.this.getReport(), fileName);
 					Logger.getInstance().logInfo("FileOutput", "Writing DONE");
 					
-					MessageBox msg = new MessageBox(GOButtonBrick.this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
+					final MessageBox msg = new MessageBox(GOButtonBrick.this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
 					msg.setText("Generierung");
 					msg.setMessage("Datei " + fileName + " erfolgreich erstellt");
 					msg.open();
 					
-				} catch (Exception ex) {
+				} catch (final Exception ex) {
 					ex.printStackTrace();
 					Logger.getInstance().logError("FileOutput", "Writing failed: " + ex.getMessage());
-					MessageBox msg = new MessageBox(GOButtonBrick.this.getShell(), SWT.ICON_ERROR | SWT.OK);
+					final MessageBox msg = new MessageBox(GOButtonBrick.this.getShell(), SWT.ICON_ERROR | SWT.OK);
 					msg.setText("Generierung");
 					msg.setMessage("Datei " + fileName + " fehlgeschlagen!\n " + ex.getMessage());
 					msg.open();

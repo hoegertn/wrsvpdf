@@ -39,12 +39,12 @@ public class GymPanel extends MainPanel {
 	 * @param style
 	 * @param formstyle
 	 */
-	public GymPanel(Composite parent, int style, int formstyle) {
+	public GymPanel(final Composite parent, final int style, final int formstyle) {
 		super(parent, style, formstyle);
 	}
 	
 	@Override
-	protected void createPanelContents(Composite parent) {
+	protected void createPanelContents(final Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Staffel auswählen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
@@ -61,8 +61,8 @@ public class GymPanel extends MainPanel {
 			protected JasperPrint getReport() throws PdfGeneratorException {
 				FileMemory.getInstance().setStaffelFile(GymPanel.this.staffelText.getText());
 				
-				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(GymPanel.this.staffelText.getText());
-				Halle[] gyms = FileIORegistry.getImporter().loadHallenFromFile(GymPanel.this.gymText.getText());
+				final Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(GymPanel.this.staffelText.getText());
+				final Halle[] gyms = FileIORegistry.getImporter().loadHallenFromFile(GymPanel.this.gymText.getText());
 				return HallenReport.createReport(staffel, gyms);
 			}
 		};

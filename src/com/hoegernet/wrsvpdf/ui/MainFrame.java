@@ -83,11 +83,11 @@ public class MainFrame extends MyShell {
 	}
 	
 	@Override
-	protected void createContents(Composite parent) {
+	protected void createContents(final Composite parent) {
 		this.sfb = new SashFormBrick(parent, SWT.BORDER) {
 			
 			@Override
-			protected void createContents(Composite form) {
+			protected void createContents(final Composite form) {
 				new Expand(form, SWT.V_SCROLL, ExpandBarBrick.DEFAULT, MainFrame.this);
 				MainFrame.this.frame = new PlainPanel(form, SWT.FILL, CompositeBrick.DEFAULT);
 			}
@@ -98,7 +98,7 @@ public class MainFrame extends MyShell {
 	/**
 	 * @param type
 	 */
-	public void setActivePanel(PanelType type) {
+	public void setActivePanel(final PanelType type) {
 		if (this.frame != null) {
 			this.frame.dispose();
 		}

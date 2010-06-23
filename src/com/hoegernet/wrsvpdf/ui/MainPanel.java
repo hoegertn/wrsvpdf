@@ -23,22 +23,22 @@ public abstract class MainPanel extends CompositeBrick {
 	 * @param style
 	 * @param formstyle
 	 */
-	public MainPanel(Composite parent, int style, int formstyle) {
+	public MainPanel(final Composite parent, final int style, final int formstyle) {
 		super(parent, style, formstyle);
 	}
 	
 	@Override
-	protected void createContents(Composite parent) {
+	protected void createContents(final Composite parent) {
 		this.setBackground(new Color(this.getShell().getDisplay(), 255, 255, 255));
 		this.setBackgroundMode(SWT.INHERIT_FORCE);
 		
-		Image image = new Image(null, "images" + File.separatorChar + "header.jpg");
+		final Image image = new Image(null, "images" + File.separatorChar + "header.jpg");
 		new ImageBrick(parent, SWT.NONE, image);
 		
 		new CompositeBrick(parent, SWT.NONE, CompositeBrick.THREE_COL) {
 			
 			@Override
-			protected void createContents(Composite panel) {
+			protected void createContents(final Composite panel) {
 				MainPanel.this.createPanelContents(panel);
 			}
 		};

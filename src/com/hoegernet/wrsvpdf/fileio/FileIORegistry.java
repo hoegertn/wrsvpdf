@@ -56,7 +56,7 @@ public class FileIORegistry {
 	/**
 	 * @param importer the importer to set
 	 */
-	public void setImporter(IFileImporter importer) {
+	public void setImporter(final IFileImporter importer) {
 		this.importer = importer;
 	}
 	
@@ -70,7 +70,7 @@ public class FileIORegistry {
 	/**
 	 * @param writer the writer to set
 	 */
-	public void setWriter(IFileWriter writer) {
+	public void setWriter(final IFileWriter writer) {
 		this.writer = writer;
 	}
 	

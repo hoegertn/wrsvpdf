@@ -39,12 +39,12 @@ public class TeamPanel extends MainPanel {
 	 * @param style
 	 * @param formstyle
 	 */
-	public TeamPanel(Composite parent, int style, int formstyle) {
+	public TeamPanel(final Composite parent, final int style, final int formstyle) {
 		super(parent, style, formstyle);
 	}
 	
 	@Override
-	protected void createPanelContents(Composite parent) {
+	protected void createPanelContents(final Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Staffel auswählen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
@@ -61,8 +61,8 @@ public class TeamPanel extends MainPanel {
 			protected JasperPrint getReport() throws PdfGeneratorException {
 				FileMemory.getInstance().setStaffelFile(TeamPanel.this.staffelText.getText());
 				
-				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(TeamPanel.this.staffelText.getText());
-				Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(TeamPanel.this.teamText.getText());
+				final Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(TeamPanel.this.staffelText.getText());
+				final Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(TeamPanel.this.teamText.getText());
 				
 				return TeamReport.createReport(staffel, teams);
 			}

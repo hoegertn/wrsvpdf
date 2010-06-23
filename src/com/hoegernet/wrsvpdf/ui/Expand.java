@@ -33,22 +33,22 @@ public class Expand extends ExpandBarBrick {
 	 * @param formstyle
 	 * @param frame
 	 */
-	public Expand(Composite parent, int style, int formstyle, MainFrame frame) {
+	public Expand(final Composite parent, final int style, final int formstyle, final MainFrame frame) {
 		super(parent, style, formstyle, frame);
 	}
 	
 	@Override
-	protected void createContents(Composite parent) {
-		ExpandBarBrick bar = (ExpandBarBrick) parent;
+	protected void createContents(final Composite parent) {
+		final ExpandBarBrick bar = (ExpandBarBrick) parent;
 		final Image pdf = new Image(null, "images" + File.separatorChar + "pdf.jpg");
 		final Image ball = new Image(null, "images" + File.separatorChar + "ball.jpg");
 		
 		// First item
-		CompositeBrick actions = new CompositeBrick(bar, SWT.NONE, CompositeBrick.TWO_COL) {
+		final CompositeBrick actions = new CompositeBrick(bar, SWT.NONE, CompositeBrick.TWO_COL) {
 			
 			@Override
-			public void createContents(Composite expand) {
-				MainFrame frame = (MainFrame) Expand.this.getDesignatedObject();
+			public void createContents(final Composite expand) {
+				final MainFrame frame = (MainFrame) Expand.this.getDesignatedObject();
 				
 				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Verbandsadressen", PanelType.WRSV, frame);
@@ -75,10 +75,10 @@ public class Expand extends ExpandBarBrick {
 		};
 		
 		// Second item
-		CompositeBrick help = new CompositeBrick(bar, SWT.NONE, CompositeBrick.TWO_COL) {
+		final CompositeBrick help = new CompositeBrick(bar, SWT.NONE, CompositeBrick.TWO_COL) {
 			
 			@Override
-			public void createContents(Composite expand) {
+			public void createContents(final Composite expand) {
 				// new ImageBrick(expand, SWT.NONE, ball);
 				// new LabelButtonBrickAdapter(expand, SWT.NONE, "Hilfe") {
 				// @Override
@@ -96,7 +96,7 @@ public class Expand extends ExpandBarBrick {
 					@Override
 					protected void execute() {
 						// TODO Kontakt
-						MessageBox msg = new MessageBox(this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
+						final MessageBox msg = new MessageBox(this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
 						msg.setText("Kontakt");
 						msg.setMessage(Configuration.CONTACT_EMAIL);
 						msg.open();
@@ -113,7 +113,7 @@ public class Expand extends ExpandBarBrick {
 					@Override
 					protected void execute() {
 						// TODO About
-						MessageBox msg = new MessageBox(this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
+						final MessageBox msg = new MessageBox(this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
 						msg.setText("About");
 						msg.setMessage("WRSV Spielplandruck - Version " + Configuration.VERSION_FULL);
 						msg.open();

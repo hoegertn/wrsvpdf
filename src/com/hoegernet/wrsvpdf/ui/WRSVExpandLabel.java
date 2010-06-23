@@ -20,7 +20,7 @@ public class WRSVExpandLabel extends LabelButtonBrickAdapter {
 	
 	private PanelType type = PanelType.START;
 	
-	private MainFrame frame;
+	private final MainFrame frame;
 	
 
 	/**
@@ -29,7 +29,7 @@ public class WRSVExpandLabel extends LabelButtonBrickAdapter {
 	 * @param type
 	 * @param frame
 	 */
-	public WRSVExpandLabel(Composite parent, String text, PanelType type, MainFrame frame) {
+	public WRSVExpandLabel(final Composite parent, final String text, final PanelType type, final MainFrame frame) {
 		super(parent, SWT.NONE, text);
 		this.type = type;
 		this.frame = frame;

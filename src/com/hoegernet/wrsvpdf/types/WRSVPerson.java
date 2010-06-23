@@ -40,7 +40,7 @@ public class WRSVPerson {
 	/**
 	 * @param jobTitle the jobTitle to set
 	 */
-	public void setJobTitle(String jobTitle) {
+	public void setJobTitle(final String jobTitle) {
 		this.jobTitle = jobTitle;
 	}
 	
@@ -54,7 +54,7 @@ public class WRSVPerson {
 	/**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 	
@@ -68,7 +68,7 @@ public class WRSVPerson {
 	/**
 	 * @param strasse the strasse to set
 	 */
-	public void setStrasse(String strasse) {
+	public void setStrasse(final String strasse) {
 		this.strasse = strasse;
 	}
 	
@@ -82,7 +82,7 @@ public class WRSVPerson {
 	/**
 	 * @param ort the ort to set
 	 */
-	public void setOrt(String ort) {
+	public void setOrt(final String ort) {
 		this.ort = ort;
 	}
 	
@@ -96,7 +96,7 @@ public class WRSVPerson {
 	/**
 	 * @param tel the tel to set
 	 */
-	public void setTel(String tel) {
+	public void setTel(final String tel) {
 		this.tel = tel;
 	}
 	
@@ -110,7 +110,7 @@ public class WRSVPerson {
 	/**
 	 * @param fax the fax to set
 	 */
-	public void setFax(String fax) {
+	public void setFax(final String fax) {
 		this.fax = fax;
 	}
 	
@@ -124,7 +124,7 @@ public class WRSVPerson {
 	/**
 	 * @param mail the mail to set
 	 */
-	public void setMail(String mail) {
+	public void setMail(final String mail) {
 		this.mail = mail;
 	}
 	

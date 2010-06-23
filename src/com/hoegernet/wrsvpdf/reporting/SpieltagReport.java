@@ -44,7 +44,7 @@ public class SpieltagReport extends AbstractGenerator {
 			vecjas.add(g);
 		}
 		
-		final String[] columns = new String[] {"number", "team1", "team2"};
+		final String[] columns = new String[] {"number", "team1", "team2", "goal1", "goal2"};
 		
 		final Map<String, String> parameters = new HashMap<String, String>();
 		parameters.put("title", staffel.getTitle());

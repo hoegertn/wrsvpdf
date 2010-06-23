@@ -18,7 +18,7 @@ public class PdfGeneratorException extends Exception {
 	 * 
 	 * @param message - Exception description
 	 */
-	public PdfGeneratorException(String message) {
+	public PdfGeneratorException(final String message) {
 		super(message);
 	}
 	
@@ -28,7 +28,7 @@ public class PdfGeneratorException extends Exception {
 	 * @param message - Exception description
 	 * @param cause - Root Cause of this exception
 	 */
-	public PdfGeneratorException(String message, Throwable cause) {
+	public PdfGeneratorException(final String message, final Throwable cause) {
 		super(message, cause);
 	}
 	
@@ -37,7 +37,7 @@ public class PdfGeneratorException extends Exception {
 	 * 
 	 * @param cause - Root Cause of this exception
 	 */
-	public PdfGeneratorException(Throwable cause) {
+	public PdfGeneratorException(final Throwable cause) {
 		super(cause);
 	}
 	

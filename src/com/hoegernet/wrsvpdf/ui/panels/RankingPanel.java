@@ -35,12 +35,12 @@ public class RankingPanel extends MainPanel {
 	 * @param style
 	 * @param formstyle
 	 */
-	public RankingPanel(Composite parent, int style, int formstyle) {
+	public RankingPanel(final Composite parent, final int style, final int formstyle) {
 		super(parent, style, formstyle);
 	}
 	
 	@Override
-	protected void createPanelContents(Composite parent) {
+	protected void createPanelContents(final Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Tabellendatei auswählen");
 		this.rankingText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new FileSelectButtonBrick(parent, this.rankingText, "*.rbr");
@@ -50,7 +50,7 @@ public class RankingPanel extends MainPanel {
 			
 			@Override
 			protected JasperPrint getReport() throws PdfGeneratorException {
-				Tabelle tabelle = FileIORegistry.getImporter().loadRankingFromFile(RankingPanel.this.rankingText.getText());
+				final Tabelle tabelle = FileIORegistry.getImporter().loadRankingFromFile(RankingPanel.this.rankingText.getText());
 				return RankingReport.createReport(tabelle);
 			}
 		};

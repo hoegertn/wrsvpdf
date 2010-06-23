@@ -26,20 +26,20 @@ public class FileIO {
 	 * @return String[] - String Array with lines of file
 	 * @throws FileIOException
 	 */
-	public static String[] getLinesFromFile(String filename) throws FileIOException {
-		List<String> lines = new ArrayList<String>();
+	public static String[] getLinesFromFile(final String filename) throws FileIOException {
+		final List<String> lines = new ArrayList<String>();
 		
 		String thisLine;
 		try {
-			FileInputStream fin = new FileInputStream(filename);
-			BufferedReader myInput = new BufferedReader(new InputStreamReader(fin));
+			final FileInputStream fin = new FileInputStream(filename);
+			final BufferedReader myInput = new BufferedReader(new InputStreamReader(fin));
 			while ((thisLine = myInput.readLine()) != null) {
 				lines.add(thisLine);
 			}
 			myInput.close();
 			fin.close();
 			return lines.toArray(new String[] {});
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			throw new FileIOException("Error reading file: " + filename, e);
 		}
 	}
@@ -50,8 +50,8 @@ public class FileIO {
 	 * @param line - line to be parsed
 	 * @return String[] - String Array with fields
 	 */
-	public static String[] getFieldsFromLine(String line) {
-		String[] fields = line.split("\",\"");
+	public static String[] getFieldsFromLine(final String line) {
+		final String[] fields = line.split("\",\"");
 		
 		for (int i = 0; i < fields.length; i++) {
 			String f = fields[i];
@@ -69,8 +69,8 @@ public class FileIO {
 	 * @param line - line to be parsed
 	 * @return String[] - String Array with fields
 	 */
-	public static String[] getFieldsFromLineWithoutQuotes(String line) {
-		String[] fields = line.split(",");
+	public static String[] getFieldsFromLineWithoutQuotes(final String line) {
+		final String[] fields = line.split(",");
 		
 		for (int i = 0; i < fields.length; i++) {
 			String f = fields[i];
@@ -87,7 +87,7 @@ public class FileIO {
 	 * @param s - string to clean
 	 * @return String without quote
 	 */
-	public static String cleanQuotes(String s) {
+	public static String cleanQuotes(final String s) {
 		String ret = s;
 		if ((ret.length() > 0) && ret.substring(0, 1).equals("\"")) {
 			ret = ret.substring(1);
@@ -105,15 +105,41 @@ public class FileIO {
 	 * @param line - line to be parsed
 	 * @return String Array containing detailed Info about Game
 	 */
-	public static String[] getSpielFromLine(String line) {
-		int dot = line.indexOf(".");
-		int minus = line.indexOf(" - ");
+	public static String[] getSpielFromLine(final String line) {
+		final String[] arr = FileIO.getFieldsFromLineWithoutQuotes(line);
 		
-		String[] res = new String[3];
+		final String game = arr[0];
+		String goal1 = "__";
+		String goal2 = "__";
 		
-		res[0] = FileIO.cleanQuotes(line.substring(0, dot));
-		res[1] = FileIO.cleanQuotes(line.substring(dot + 1, minus));
-		res[2] = FileIO.cleanQuotes(line.substring(minus + 3));
+		if (arr.length == 3) {
+			if (arr[1].equals("-2")) {
+				goal1 = "__";
+			} else if (arr[1].equals("-1")) {
+				goal1 = "0:5";
+			} else {
+				goal1 = arr[1];
+			}
+			
+			if (arr[2].equals("-2")) {
+				goal2 = "__";
+			} else if (arr[2].equals("-1")) {
+				goal2 = "0:5";
+			} else {
+				goal2 = arr[2];
+			}
+		}
+		
+		final int dot = game.indexOf(".");
+		final int minus = game.indexOf(" - ");
+		
+		final String[] res = new String[5];
+		
+		res[0] = FileIO.cleanQuotes(game.substring(0, dot));
+		res[1] = FileIO.cleanQuotes(game.substring(dot + 1, minus));
+		res[2] = FileIO.cleanQuotes(game.substring(minus + 3));
+		res[3] = goal1;
+		res[4] = goal2;
 		
 		return res;
 	}

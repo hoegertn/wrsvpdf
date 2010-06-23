@@ -51,12 +51,12 @@ public class AllGamesPanel extends MainPanel {
 	 * @param style
 	 * @param formstyle
 	 */
-	public AllGamesPanel(Composite parent, int style, int formstyle) {
+	public AllGamesPanel(final Composite parent, final int style, final int formstyle) {
 		super(parent, style, formstyle);
 	}
 	
 	@Override
-	protected void createPanelContents(Composite parent) {
+	protected void createPanelContents(final Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Staffel auswählen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
@@ -81,22 +81,22 @@ public class AllGamesPanel extends MainPanel {
 			protected List<JasperPrint> getReports() throws PdfGeneratorException {
 				FileMemory.getInstance().setStaffelFile(AllGamesPanel.this.staffelText.getText());
 				
-				List<JasperPrint> res = new ArrayList<JasperPrint>();
-				Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(AllGamesPanel.this.teamText.getText());
+				final List<JasperPrint> res = new ArrayList<JasperPrint>();
+				final Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(AllGamesPanel.this.teamText.getText());
 				
-				File dir = new File(AllGamesPanel.this.gameText.getText());
+				final File dir = new File(AllGamesPanel.this.gameText.getText());
 				if (dir.isDirectory()) {
-					File[] files = dir.listFiles(new FilenameFilter() {
+					final File[] files = dir.listFiles(new FilenameFilter() {
 						
-						public boolean accept(File directory, String name) {
+						public boolean accept(final File directory, final String name) {
 							return name.endsWith(".rbt");
 						}
 					});
 					
-					Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(AllGamesPanel.this.staffelText.getText());
+					final Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(AllGamesPanel.this.staffelText.getText());
 					
-					for (File tag : files) {
-						Spieltag game = FileIORegistry.getImporter().loadSpieltagFromFile(tag.getAbsolutePath());
+					for (final File tag : files) {
+						final Spieltag game = FileIORegistry.getImporter().loadSpieltagFromFile(tag.getAbsolutePath());
 						res.add(SpieltagReport.createReport(staffel, game, teams, AllGamesPanel.this.chkReport.getSelection()));
 					}
 				}

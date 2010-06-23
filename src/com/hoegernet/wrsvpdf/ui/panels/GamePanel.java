@@ -45,12 +45,12 @@ public class GamePanel extends MainPanel {
 	 * @param style
 	 * @param formstyle
 	 */
-	public GamePanel(Composite parent, int style, int formstyle) {
+	public GamePanel(final Composite parent, final int style, final int formstyle) {
 		super(parent, style, formstyle);
 	}
 	
 	@Override
-	protected void createPanelContents(Composite parent) {
+	protected void createPanelContents(final Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Staffel auswählen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
@@ -75,9 +75,9 @@ public class GamePanel extends MainPanel {
 			protected JasperPrint getReport() throws PdfGeneratorException {
 				FileMemory.getInstance().setStaffelFile(GamePanel.this.staffelText.getText());
 				
-				Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(GamePanel.this.staffelText.getText());
-				Spieltag game = FileIORegistry.getImporter().loadSpieltagFromFile(GamePanel.this.gameText.getText());
-				Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(GamePanel.this.teamText.getText());
+				final Staffel staffel = FileIORegistry.getImporter().loadStaffelFromFile(GamePanel.this.staffelText.getText());
+				final Spieltag game = FileIORegistry.getImporter().loadSpieltagFromFile(GamePanel.this.gameText.getText());
+				final Team[] teams = FileIORegistry.getImporter().loadTeamsFromFile(GamePanel.this.teamText.getText());
 				return SpieltagReport.createReport(staffel, game, teams, GamePanel.this.chkReport.getSelection());
 			}
 		};

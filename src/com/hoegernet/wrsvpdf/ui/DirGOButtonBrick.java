@@ -34,17 +34,17 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 	 * @param parent
 	 * @param label
 	 */
-	public DirGOButtonBrick(Composite parent, String label) {
+	public DirGOButtonBrick(final Composite parent, final String label) {
 		super(parent, label);
 		this.addSelectionListener(new SelectionListener() {
 			
-			public void widgetDefaultSelected(SelectionEvent e) {
+			public void widgetDefaultSelected(final SelectionEvent e) {
 				//
 			}
 			
-			public void widgetSelected(SelectionEvent e) {
-				DirectoryDialog dialog = new DirectoryDialog(DirGOButtonBrick.this.getShell(), SWT.SAVE);
-				String file = dialog.open();
+			public void widgetSelected(final SelectionEvent e) {
+				final DirectoryDialog dialog = new DirectoryDialog(DirGOButtonBrick.this.getShell(), SWT.SAVE);
+				final String file = dialog.open();
 				if (file != null) {
 					DirGOButtonBrick.this.createReport(file);
 				}
@@ -55,7 +55,7 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 	/**
 	 * @param parent
 	 */
-	public DirGOButtonBrick(Composite parent) {
+	public DirGOButtonBrick(final Composite parent) {
 		this(parent, "");
 		this.setImage(new Image(null, "images" + File.separatorChar + "go.jpg"));
 	}
@@ -69,7 +69,7 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 	 * @param dirName
 	 */
 	public void createReport(final String dirName) {
-		Runnable job = new Runnable() {
+		final Runnable job = new Runnable() {
 			
 			public void run() {
 				try {
@@ -77,21 +77,21 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 					if (!dir.endsWith("\\")) {
 						dir += "\\";
 					}
-					List<JasperPrint> reports = DirGOButtonBrick.this.getReports();
+					final List<JasperPrint> reports = DirGOButtonBrick.this.getReports();
 					
-					for (JasperPrint print : reports) {
+					for (final JasperPrint print : reports) {
 						JasperExportManager.exportReportToPdfFile(print, dir + print.getName() + ".pdf");
 					}
 					
-					MessageBox msg = new MessageBox(DirGOButtonBrick.this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
+					final MessageBox msg = new MessageBox(DirGOButtonBrick.this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
 					msg.setText("Generierung");
 					msg.setMessage("Dateien in Verzeichnis " + dirName + " erfolgreich erstellt");
 					msg.open();
 					
-				} catch (Exception ex) {
+				} catch (final Exception ex) {
 					ex.printStackTrace();
 					Logger.getInstance().logError("FileOutput", "Writing failed: " + ex.getMessage());
-					MessageBox msg = new MessageBox(DirGOButtonBrick.this.getShell(), SWT.ICON_ERROR | SWT.OK);
+					final MessageBox msg = new MessageBox(DirGOButtonBrick.this.getShell(), SWT.ICON_ERROR | SWT.OK);
 					msg.setText("Generierung");
 					msg.setMessage("Dateien aus Verzeichnis " + dirName + " fehlgeschlagen!\n " + ex.getMessage());
 					msg.open();

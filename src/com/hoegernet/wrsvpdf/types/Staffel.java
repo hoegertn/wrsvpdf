@@ -39,7 +39,7 @@ public class Staffel {
 	/**
 	 * @param title the title to set
 	 */
-	public void setTitle(String title) {
+	public void setTitle(final String title) {
 		this.title = title;
 	}
 	
@@ -53,7 +53,7 @@ public class Staffel {
 	/**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 	
@@ -67,7 +67,7 @@ public class Staffel {
 	/**
 	 * @param staffelleiter_name the staffelleiter_name to set
 	 */
-	public void setStaffelleiter_name(String staffelleiter_name) {
+	public void setStaffelleiter_name(final String staffelleiter_name) {
 		this.staffelleiter_name = staffelleiter_name;
 	}
 	
@@ -81,7 +81,7 @@ public class Staffel {
 	/**
 	 * @param staffelleiter_strasse the staffelleiter_strasse to set
 	 */
-	public void setStaffelleiter_strasse(String staffelleiter_strasse) {
+	public void setStaffelleiter_strasse(final String staffelleiter_strasse) {
 		this.staffelleiter_strasse = staffelleiter_strasse;
 	}
 	
@@ -95,7 +95,7 @@ public class Staffel {
 	/**
 	 * @param staffelleiter_telfax the staffelleiter_telfax to set
 	 */
-	public void setStaffelleiter_telfax(String staffelleiter_telfax) {
+	public void setStaffelleiter_telfax(final String staffelleiter_telfax) {
 		this.staffelleiter_telfax = staffelleiter_telfax;
 	}
 	
@@ -109,7 +109,7 @@ public class Staffel {
 	/**
 	 * @param staffelleiter_mail the staffelleiter_mail to set
 	 */
-	public void setStaffelleiter_mail(String staffelleiter_mail) {
+	public void setStaffelleiter_mail(final String staffelleiter_mail) {
 		this.staffelleiter_mail = staffelleiter_mail;
 	}
 	
@@ -123,7 +123,7 @@ public class Staffel {
 	/**
 	 * @param regelungen the regelungen to set
 	 */
-	public void setRegelungen(String regelungen) {
+	public void setRegelungen(final String regelungen) {
 		this.regelungen = regelungen;
 	}
 	

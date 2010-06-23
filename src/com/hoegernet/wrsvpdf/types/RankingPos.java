@@ -38,7 +38,7 @@ public class RankingPos {
 	/**
 	 * @param pos the pos to set
 	 */
-	public void setPos(String pos) {
+	public void setPos(final String pos) {
 		this.pos = pos;
 	}
 	
@@ -52,7 +52,7 @@ public class RankingPos {
 	/**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 	
@@ -66,7 +66,7 @@ public class RankingPos {
 	/**
 	 * @param spiele the spiele to set
 	 */
-	public void setSpiele(String spiele) {
+	public void setSpiele(final String spiele) {
 		this.spiele = spiele;
 	}
 	
@@ -80,7 +80,7 @@ public class RankingPos {
 	/**
 	 * @param tore_pos the tore_pos to set
 	 */
-	public void setTore_pos(String tore_pos) {
+	public void setTore_pos(final String tore_pos) {
 		this.tore_pos = tore_pos;
 	}
 	
@@ -94,7 +94,7 @@ public class RankingPos {
 	/**
 	 * @param tore_neg the tore_neg to set
 	 */
-	public void setTore_neg(String tore_neg) {
+	public void setTore_neg(final String tore_neg) {
 		this.tore_neg = tore_neg;
 	}
 	
@@ -108,7 +108,7 @@ public class RankingPos {
 	/**
 	 * @param diff the diff to set
 	 */
-	public void setDiff(String diff) {
+	public void setDiff(final String diff) {
 		this.diff = diff;
 	}
 	
@@ -122,7 +122,7 @@ public class RankingPos {
 	/**
 	 * @param pkt the pkt to set
 	 */
-	public void setPkt(String pkt) {
+	public void setPkt(final String pkt) {
 		this.pkt = pkt;
 	}
 	

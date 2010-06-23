@@ -22,12 +22,12 @@ public class PlainPanel extends MainPanel {
 	 * @param style
 	 * @param formstyle
 	 */
-	public PlainPanel(Composite parent, int style, int formstyle) {
+	public PlainPanel(final Composite parent, final int style, final int formstyle) {
 		super(parent, style, formstyle);
 	}
 	
 	@Override
-	protected void createPanelContents(Composite parent) {
+	protected void createPanelContents(final Composite parent) {
 		new LabelBrick(parent, SWT.NONE, "Aktion auswählen");
 	}
 	

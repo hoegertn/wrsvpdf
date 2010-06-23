@@ -22,7 +22,7 @@ public class FileIOException extends PdfGeneratorException {
 	 * @param message - Exception description
 	 * @param cause - Root Cause of this exception
 	 */
-	public FileIOException(String message, Throwable cause) {
+	public FileIOException(final String message, final Throwable cause) {
 		super(message, cause);
 	}
 	
