@@ -11,7 +11,7 @@ import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 import com.hoegernet.wrsvpdf.types.Staffel;
 
 /**
- * @author Thorsten Höger
+ * @author Thorsten Hï¿½ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf/ Type: ClubReport
  * 
@@ -22,8 +22,6 @@ public class RulesReport extends AbstractGenerator {
 	
 	/**
 	 * @param staffel
-	 * @param tag
-	 * @param teams
 	 * @return Report
 	 * @throws PdfGeneratorException
 	 */
