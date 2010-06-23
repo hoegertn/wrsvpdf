@@ -1,3 +1,6 @@
+[build:2.4.0_2010_06_23]
+- results in report
+
 [build:2.3.1_2009_07_15]
 - report improvements
 - wrsv addresses
