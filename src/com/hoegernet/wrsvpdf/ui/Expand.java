@@ -123,7 +123,7 @@ public class Expand extends ExpandBarBrick {
 					}
 				};
 				new ImageBrick(expand, SWT.NONE, ball);
-				new LabelButtonBrickAdapter(expand, SWT.NONE, "Schlie�en") {
+				new LabelButtonBrickAdapter(expand, SWT.NONE, "Schließen") {
 					
 					@Override
 					protected void execute() {
