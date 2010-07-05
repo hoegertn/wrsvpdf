@@ -43,7 +43,7 @@ public class WRSVPanel extends MainPanel {
 	
 	@Override
 	protected void createPanelContents(final Composite parent) {
-		new LabelBrick(parent, SWT.NONE, "Staffel ausw‰hlen");
+		new LabelBrick(parent, SWT.NONE, "Staffel ausw√§hlen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
 		new FileSelectButtonBrick(parent, this.staffelText, "*.rbs");

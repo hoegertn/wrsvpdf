@@ -6,7 +6,7 @@ package com.hoegernet.wrsvpdf.fileio;
 /**
  * This class manages the import/export Implementations
  * 
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf Type: FileIORegistry
  * 

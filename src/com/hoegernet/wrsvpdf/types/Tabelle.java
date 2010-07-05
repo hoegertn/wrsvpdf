@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Copyright 2007 Hoegernet IT Services
  * 
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf Type: Tabelle
  * 

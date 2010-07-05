@@ -3,7 +3,7 @@ package com.hoegernet.wrsvpdf.types;
 /**
  * Copyright 2007 Hoegernet IT Services
  * 
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf Type: RankingPos
  * 

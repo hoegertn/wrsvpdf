@@ -28,7 +28,7 @@ public class PlainPanel extends MainPanel {
 	
 	@Override
 	protected void createPanelContents(final Composite parent) {
-		new LabelBrick(parent, SWT.NONE, "Aktion ausw‰hlen");
+		new LabelBrick(parent, SWT.NONE, "Aktion ausw√§hlen");
 	}
 	
 }

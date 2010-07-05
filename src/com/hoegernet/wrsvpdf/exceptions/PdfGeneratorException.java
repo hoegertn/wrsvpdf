@@ -1,7 +1,7 @@
 package com.hoegernet.wrsvpdf.exceptions;
 
 /**
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf Type: PdfGeneratorException
  * 

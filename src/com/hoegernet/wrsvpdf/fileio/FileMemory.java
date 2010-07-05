@@ -5,7 +5,7 @@ package com.hoegernet.wrsvpdf.fileio;
  * 
  * Copyright 2008 Hoegernet IT Services
  * 
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf/ Type: FileMemory
  * 

@@ -7,7 +7,7 @@ import com.hoegernet.common.logger.ELogLevel;
 /**
  * This File provides version information.<br>
  * 
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf Type: Configuration
  * 

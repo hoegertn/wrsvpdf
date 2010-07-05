@@ -19,7 +19,7 @@ import com.hoegernet.wrsvpdf.types.WRSVPerson;
 
 /**
  * 
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf/ Type: FlatFileImport
  * 
@@ -47,11 +47,12 @@ public class FlatFileImport implements IFileImporter {
 		staffel.setStaffelleiter_telfax(person[2]);
 		staffel.setStaffelleiter_mail(person[3]);
 		
-		String reg = "";
+		final StringBuilder sb = new StringBuilder();
 		for (int i = 2; i < lines.length; i++) {
-			reg += FileIO.cleanQuotes(lines[i]);
+			sb.append(FileIO.cleanQuotes(lines[i]));
+			sb.append("\n\n");
 		}
-		staffel.setRegelungen(reg);
+		staffel.setRegelungen(sb.toString());
 		Logger.getInstance().logInfo("FileImport", "Loading DONE");
 		
 		return staffel;

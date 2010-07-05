@@ -16,7 +16,7 @@ import com.hoegernet.wrsvpdf.Configuration;
 import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 
 /**
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf/ Type: AbstractGenerator
  * 

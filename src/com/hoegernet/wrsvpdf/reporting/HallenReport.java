@@ -12,7 +12,7 @@ import com.hoegernet.wrsvpdf.types.Halle;
 import com.hoegernet.wrsvpdf.types.Staffel;
 
 /**
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf/ Type: ClubReport
  * 

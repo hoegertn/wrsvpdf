@@ -50,7 +50,7 @@ public abstract class GOButtonBrick extends PushButtonBrick {
 					if (new File(file).exists()) {
 						final MessageBox msg = new MessageBox(GOButtonBrick.this.getShell(), SWT.ICON_QUESTION | SWT.YES | SWT.NO);
 						msg.setText("Warnung");
-						msg.setMessage("Datei existiert bereits! Überschreiben?");
+						msg.setMessage("Datei existiert bereits! Ãœberschreiben?");
 						
 						if (msg.open() == SWT.NO) {
 							return;

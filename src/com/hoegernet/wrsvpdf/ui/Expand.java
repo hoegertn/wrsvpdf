@@ -95,7 +95,6 @@ public class Expand extends ExpandBarBrick {
 					
 					@Override
 					protected void execute() {
-						// TODO Kontakt
 						final MessageBox msg = new MessageBox(this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
 						msg.setText("Kontakt");
 						msg.setMessage(Configuration.CONTACT_EMAIL);
@@ -112,7 +111,6 @@ public class Expand extends ExpandBarBrick {
 					
 					@Override
 					protected void execute() {
-						// TODO About
 						final MessageBox msg = new MessageBox(this.getShell(), SWT.ICON_INFORMATION | SWT.OK);
 						msg.setText("About");
 						msg.setMessage("WRSV Spielplandruck - Version " + Configuration.VERSION_FULL);
@@ -125,7 +123,7 @@ public class Expand extends ExpandBarBrick {
 					}
 				};
 				new ImageBrick(expand, SWT.NONE, ball);
-				new LabelButtonBrickAdapter(expand, SWT.NONE, "Schließen") {
+				new LabelButtonBrickAdapter(expand, SWT.NONE, "Schlieï¿½en") {
 					
 					@Override
 					protected void execute() {

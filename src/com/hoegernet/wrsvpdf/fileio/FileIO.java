@@ -10,7 +10,7 @@ import com.hoegernet.wrsvpdf.exceptions.FileIOException;
 
 /**
  * 
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf/ Type: FileIO
  * 

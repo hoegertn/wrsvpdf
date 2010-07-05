@@ -41,7 +41,7 @@ public class RankingPanel extends MainPanel {
 	
 	@Override
 	protected void createPanelContents(final Composite parent) {
-		new LabelBrick(parent, SWT.NONE, "Tabellendatei ausw‰hlen");
+		new LabelBrick(parent, SWT.NONE, "Tabellendatei ausw√§hlen");
 		this.rankingText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new FileSelectButtonBrick(parent, this.rankingText, "*.rbr");
 		

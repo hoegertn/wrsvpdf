@@ -1,3 +1,7 @@
+[build:2.4.1_2010_07_05]
+- multi line rules
+- UTF8 encoding
+
 [build:2.4.0_2010_06_23]
 - results in report
 

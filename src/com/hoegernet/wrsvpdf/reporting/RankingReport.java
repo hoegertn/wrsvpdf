@@ -13,7 +13,7 @@ import com.hoegernet.wrsvpdf.types.RankingPos;
 import com.hoegernet.wrsvpdf.types.Tabelle;
 
 /**
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf/ Type: ClubReport
  * 

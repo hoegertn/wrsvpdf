@@ -57,18 +57,18 @@ public class AllGamesPanel extends MainPanel {
 	
 	@Override
 	protected void createPanelContents(final Composite parent) {
-		new LabelBrick(parent, SWT.NONE, "Staffel ausw‰hlen");
+		new LabelBrick(parent, SWT.NONE, "Staffel ausw√§hlen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
 		new FileSelectButtonBrick(parent, this.staffelText, "*.rbs");
 		
-		new LabelBrick(parent, SWT.NONE, "Mannschaftsdatei ausw‰hlen");
+		new LabelBrick(parent, SWT.NONE, "Mannschaftsdatei ausw√§hlen");
 		this.teamText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new FileSelectButtonBrick(parent, this.teamText, "*.rbm");
 		
-		new LabelBrick(parent, SWT.NONE, "Spieltagordner ausw‰hlen");
+		new LabelBrick(parent, SWT.NONE, "Spieltagordner ausw√§hlen");
 		this.gameText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
-		new DirSelectButtonBrick(parent, this.gameText, "Ordner w‰hlen");
+		new DirSelectButtonBrick(parent, this.gameText, "Ordner w√§hlen");
 		
 		new LabelBrick(parent, SWT.NONE, "Berichtsbogen?");
 		this.chkReport = new CheckBoxButtonBrick(parent, "");

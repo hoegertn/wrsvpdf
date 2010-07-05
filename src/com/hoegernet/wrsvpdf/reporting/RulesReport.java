@@ -11,7 +11,7 @@ import com.hoegernet.wrsvpdf.exceptions.PdfGeneratorException;
 import com.hoegernet.wrsvpdf.types.Staffel;
 
 /**
- * @author Thorsten H�ger
+ * @author Thorsten Höger
  * 
  *         Projekt: com.hoegernet.wrsvpdf/ Type: ClubReport
  * 

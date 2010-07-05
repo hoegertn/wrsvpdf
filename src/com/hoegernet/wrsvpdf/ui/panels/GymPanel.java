@@ -45,12 +45,12 @@ public class GymPanel extends MainPanel {
 	
 	@Override
 	protected void createPanelContents(final Composite parent) {
-		new LabelBrick(parent, SWT.NONE, "Staffel ausw‰hlen");
+		new LabelBrick(parent, SWT.NONE, "Staffel ausw√§hlen");
 		this.staffelText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		this.staffelText.setText(FileMemory.getInstance().getStaffelFile());
 		new FileSelectButtonBrick(parent, this.staffelText, "*.rbs");
 		
-		new LabelBrick(parent, SWT.NONE, "Hallendatei ausw‰hlen");
+		new LabelBrick(parent, SWT.NONE, "Hallendatei ausw√§hlen");
 		this.gymText = new TextFieldBrick(parent, SWT.BORDER, TextFieldBrick.NONE, "", Text.LIMIT, 200);
 		new FileSelectButtonBrick(parent, this.gymText, "*.rbh");
 		

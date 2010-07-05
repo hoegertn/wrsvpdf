@@ -11,7 +11,7 @@ import com.hoegernet.wrsvpdf.ui.MainFrame;
 /**
  * Main Class for WRSV-PDF.<br>
  * 
- * @author Thorsten Höger
+ * @author Thorsten HÃ¶ger
  * 
  *         Projekt: com.hoegernet.wrsvpdf Type: Starter
  * 
