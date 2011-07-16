@@ -93,11 +93,6 @@
 			<fileset dir="${basedir}/src">
 				<include name="**/*.*" />
 			</fileset>
-		</copy>
-		<copy todir="${target}/src">
-			<fileset dir="${basedir}/src">
-				<include name="**/Configuration.java" />
-			</fileset>
 			<filterset>
 				<filter token="MAJOR" value="${version.major}" />
 				<filter token="MINOR" value="${version.minor}" />
