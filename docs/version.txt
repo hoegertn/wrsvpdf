@@ -1,3 +1,7 @@
+[build:2.5.0_2011_07_17]
+- signature ordering
+- no rules text
+
 [build:2.4.1_2010_07_05]
 - multi line rules
 - UTF8 encoding

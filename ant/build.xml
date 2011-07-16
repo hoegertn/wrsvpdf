@@ -88,9 +88,15 @@
 	<target name="-copySrc" description="Vorbereitung und Initialisierung">
 
 		<!-- Installationsdatei erstellen -->
+		<!-- Installationsdatei erstellen -->
 		<copy todir="${target}/src">
 			<fileset dir="${basedir}/src">
 				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${target}/src">
+			<fileset dir="${basedir}/src">
+				<include name="**/Configuration.java" />
 			</fileset>
 			<filterset>
 				<filter token="MAJOR" value="${version.major}" />
@@ -127,7 +133,7 @@
 			</path>
 		</pathconvert>
 
-		<javac srcdir="${target}/src" destdir="${target}/bin" debug="true" debuglevel="lines,vars,source">
+		<javac srcdir="${target}/src" encoding="UTF8" destdir="${target}/bin" debug="true" debuglevel="lines,vars,source">
 			<classpath refid="LibPath" />
 		</javac>
 

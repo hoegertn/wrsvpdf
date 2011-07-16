@@ -47,8 +47,6 @@ public class TeamReport extends AbstractGenerator {
 		parameters.put("telfax", staffel.getStaffelleiter_telfax());
 		parameters.put("mail", staffel.getStaffelleiter_mail());
 		
-		final JasperPrint jprint = AbstractGenerator.print(Configuration.REPORT_TEAM, parameters, vecjas, columns, (staffel.getTitle().length() > Configuration.MAX_TITLE_LENGTH));
-		AbstractGenerator.concatReport(jprint, RulesReport.createReport(staffel));
-		return jprint;
+		return AbstractGenerator.print(Configuration.REPORT_TEAM, parameters, vecjas, columns, (staffel.getTitle().length() > Configuration.MAX_TITLE_LENGTH));
 	}
 }

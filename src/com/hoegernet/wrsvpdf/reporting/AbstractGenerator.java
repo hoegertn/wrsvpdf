@@ -59,8 +59,8 @@ public abstract class AbstractGenerator {
 		return jprint;
 	}
 	
-	protected static void concatReport(final JasperPrint master, final JasperPrint extarReport) {
-		for (final Object obj : extarReport.getPages()) {
+	protected static void concatReport(final JasperPrint master, final JasperPrint extraReport) {
+		for (final Object obj : extraReport.getPages()) {
 			if (obj instanceof JRPrintPage) {
 				master.addPage((JRPrintPage) obj);
 			}

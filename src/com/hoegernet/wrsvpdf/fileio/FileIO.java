@@ -3,6 +3,7 @@ package com.hoegernet.wrsvpdf.fileio;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class FileIO {
 		String thisLine;
 		try {
 			final FileInputStream fin = new FileInputStream(filename);
-			final BufferedReader myInput = new BufferedReader(new InputStreamReader(fin));
+			final BufferedReader myInput = new BufferedReader(new InputStreamReader(fin, Charset.forName("Cp1252")));
 			while ((thisLine = myInput.readLine()) != null) {
 				lines.add(thisLine);
 			}
