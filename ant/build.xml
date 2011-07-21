@@ -72,7 +72,6 @@
 
 		<mkdir dir="${package}/docs" />
 		<mkdir dir="${package}/docs/javadoc" />
-		<mkdir dir="${package}/demo" />
 		<mkdir dir="${package}/lib" />
 		<mkdir dir="${package}/images" />
 		<mkdir dir="${package}/reports" />
@@ -175,9 +174,6 @@
 		</copy>
 		<copy todir="${package}">
 			<fileset dir="${basedir}/config" includes="**.*" excludes="MANIFEST.MF" />
-		</copy>
-		<copy todir="${package}/demo">
-			<fileset dir="${basedir}/demo" includes="**/**.*" />
 		</copy>
 		<copy todir="${package}/lib">
 			<fileset dir="${basedir}/lib" includes="**.*" />

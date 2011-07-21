@@ -1,3 +1,7 @@
+[build:2.5.1_2011_07_21]
+- fixed wrsv.ini encoding
+- added new rules text
+
 [build:2.5.0_2011_07_17]
 - signature ordering
 - no rules text

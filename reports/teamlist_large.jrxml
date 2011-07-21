@@ -2,6 +2,9 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="teamlist" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="20" bottomMargin="20">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
@@ -257,9 +260,9 @@
 		<band splitType="Stretch"/>
 	</columnFooter>
 	<lastPageFooter>
-		<band height="13" splitType="Stretch">
+		<band height="57" splitType="Stretch">
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-26" x="0" y="0" width="199" height="12"/>
+				<reportElement key="textField-26" x="0" y="45" width="199" height="12"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -271,6 +274,15 @@
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA["Erstellt: " + $P{datetime} + " / " + $P{writerVersion}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="511" height="40"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Regelungen für die Verbandsrunde 2011/2012
+
+Die Regelungen für Aufstieg und Abstieg in den Eliteklassen, sowie für die Qualifikation zu den Baden-Württembergischen Meisterschaften im Nachwuchsbereich werden rechtzeitig zu Beginn der Verbandsrunde im Internet veröffentlicht.]]></text>
+			</staticText>
 		</band>
 	</lastPageFooter>
 	<summary>
