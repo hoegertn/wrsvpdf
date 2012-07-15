@@ -1,3 +1,7 @@
+[build:2.6.0_2012_07_15]
+- fixed dayreport
+- added new logo images
+
 [build:2.5.1_2011_07_21]
 - fixed wrsv.ini encoding
 - added new rules text
