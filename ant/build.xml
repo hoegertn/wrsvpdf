@@ -141,7 +141,7 @@
 			<!-- define MANIFEST.MF -->
 			<manifest>
 				<attribute name="Built-By" value="Thorsten Hoeger" />
-				<attribute name="Built-Jdk" value="1.5.0" />
+				<attribute name="Built-Jdk" value="1.7.0" />
 				<attribute name="Main-Class" value="com.hoegernet.wrsvpdf.Starter" />
 				<attribute name="Specification-Title" value="WRSV PDF generator" />
 				<attribute name="Specification-Version" value="2.0.0" />
