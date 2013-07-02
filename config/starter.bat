@@ -1,1 +1,1 @@
-start javaw -Djava.library.path=.\lib -jar com.hoegernet.wrsvpdf.jar 
+start jre7/bin/javaw -Djava.library.path=.\lib -jar com.hoegernet.wrsvpdf.jar 
