@@ -1,3 +1,7 @@
+[build:2.7.0_2014_07_06]
+- Version auf Berichtsbogen
+- Spieltagende auf Ergebnisbogen
+
 [build:2.6.0_2012_07_15]
 - fixed dayreport
 - added new logo images
