@@ -45,7 +45,7 @@ public class AllGamesPanel extends MainPanel {
 	
 	private CheckBoxButtonBrick chkReport;
 	
-
+	
 	/**
 	 * @param parent
 	 * @param style
@@ -88,6 +88,7 @@ public class AllGamesPanel extends MainPanel {
 				if (dir.isDirectory()) {
 					final File[] files = dir.listFiles(new FilenameFilter() {
 						
+						@Override
 						public boolean accept(final File directory, final String name) {
 							return name.endsWith(".rbt");
 						}

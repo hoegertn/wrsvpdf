@@ -28,6 +28,7 @@ import com.hoegernet.wrsvpdf.types.WRSVPerson;
  */
 public class FlatFileImport implements IFileImporter {
 	
+	@Override
 	public Staffel loadStaffelFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Staffel from file: " + filename);
 		final Staffel staffel = new Staffel();
@@ -58,6 +59,7 @@ public class FlatFileImport implements IFileImporter {
 		return staffel;
 	}
 	
+	@Override
 	public Halle[] loadHallenFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Hallen from file: " + filename);
 		final String[] lines = FileIO.getLinesFromFile(filename);
@@ -84,6 +86,7 @@ public class FlatFileImport implements IFileImporter {
 		return hallen;
 	}
 	
+	@Override
 	public Team[] loadTeamsFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Teams from file: " + filename);
 		
@@ -111,6 +114,7 @@ public class FlatFileImport implements IFileImporter {
 		return teams;
 	}
 	
+	@Override
 	public Verein[] loadClubsFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Clubs from file: " + filename);
 		
@@ -140,6 +144,7 @@ public class FlatFileImport implements IFileImporter {
 		return clubs;
 	}
 	
+	@Override
 	public Spieltag loadSpieltagFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Spieltag from file: " + filename);
 		
@@ -191,6 +196,7 @@ public class FlatFileImport implements IFileImporter {
 		return tag;
 	}
 	
+	@Override
 	public WRSVPerson[] loadWRSVPersonenFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading WRSV from file: " + filename);
 		
@@ -219,6 +225,7 @@ public class FlatFileImport implements IFileImporter {
 		return pers.toArray(new WRSVPerson[lines.length]);
 	}
 	
+	@Override
 	public Tabelle loadRankingFromFile(final String filename) throws PdfGeneratorException {
 		Logger.getInstance().logInfo("FileImport", "Loading Ranking from file: " + filename);
 		

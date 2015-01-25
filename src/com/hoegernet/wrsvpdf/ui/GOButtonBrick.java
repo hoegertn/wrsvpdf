@@ -38,10 +38,12 @@ public abstract class GOButtonBrick extends PushButtonBrick {
 		super(parent, label);
 		this.addSelectionListener(new SelectionListener() {
 			
+			@Override
 			public void widgetDefaultSelected(final SelectionEvent e) {
 				//
 			}
 			
+			@Override
 			public void widgetSelected(final SelectionEvent e) {
 				final FileDialog dialog = new FileDialog(GOButtonBrick.this.getShell(), SWT.SAVE);
 				dialog.setFileName(defName);
@@ -82,6 +84,7 @@ public abstract class GOButtonBrick extends PushButtonBrick {
 	public void createReport(final String fileName) {
 		final Runnable job = new Runnable() {
 			
+			@Override
 			public void run() {
 				Logger.getInstance().logInfo("FileOutput", "Writing WRSV report to file: " + fileName);
 				try {

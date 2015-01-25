@@ -39,6 +39,7 @@ public class ReportingReport extends AbstractGenerator {
 		
 		Arrays.sort(teams, new Comparator<Team>() {
 			
+			@Override
 			public int compare(final Team o1, final Team o2) {
 				return o1.getName().compareTo(o2.getName());
 			}

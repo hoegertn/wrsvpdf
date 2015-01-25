@@ -19,7 +19,6 @@ import com.hoegernet.wrsvpdf.ui.panels.GymPanel;
 import com.hoegernet.wrsvpdf.ui.panels.PlainPanel;
 import com.hoegernet.wrsvpdf.ui.panels.RankingPanel;
 import com.hoegernet.wrsvpdf.ui.panels.TeamPanel;
-import com.hoegernet.wrsvpdf.ui.panels.WRSVPanel;
 
 /**
  * type: com.hoegernet.wrsvpdf->MainFrame
@@ -39,8 +38,6 @@ public class MainFrame extends MyShell {
 		/**	 */
 		START,
 		/**	 */
-		WRSV,
-		/**	 */
 		TEAMS,
 		/**	 */
 		GYM,
@@ -54,12 +51,12 @@ public class MainFrame extends MyShell {
 		SPIELTAG_DIR;
 	}
 	
-
+	
 	private SashFormBrick sfb = null;
 	
 	private MainPanel frame = null;
 	
-
+	
 	/**
 	 * Default constructor
 	 */
@@ -121,9 +118,6 @@ public class MainFrame extends MyShell {
 			break;
 		case TEAMS:
 			this.frame = new TeamPanel(this.sfb, SWT.FILL, CompositeBrick.DEFAULT);
-			break;
-		case WRSV:
-			this.frame = new WRSVPanel(this.sfb, SWT.FILL, CompositeBrick.DEFAULT);
 			break;
 		case RANKING:
 			this.frame = new RankingPanel(this.sfb, SWT.FILL, CompositeBrick.DEFAULT);

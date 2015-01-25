@@ -38,10 +38,12 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 		super(parent, label);
 		this.addSelectionListener(new SelectionListener() {
 			
+			@Override
 			public void widgetDefaultSelected(final SelectionEvent e) {
 				//
 			}
 			
+			@Override
 			public void widgetSelected(final SelectionEvent e) {
 				final DirectoryDialog dialog = new DirectoryDialog(DirGOButtonBrick.this.getShell(), SWT.SAVE);
 				final String file = dialog.open();
@@ -71,6 +73,7 @@ public abstract class DirGOButtonBrick extends PushButtonBrick {
 	public void createReport(final String dirName) {
 		final Runnable job = new Runnable() {
 			
+			@Override
 			public void run() {
 				try {
 					String dir = dirName;

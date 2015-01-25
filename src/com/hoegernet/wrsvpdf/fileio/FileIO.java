@@ -32,13 +32,11 @@ public class FileIO {
 		
 		String thisLine;
 		try {
-			final FileInputStream fin = new FileInputStream(filename);
-			final BufferedReader myInput = new BufferedReader(new InputStreamReader(fin, Charset.forName("Cp1252")));
-			while ((thisLine = myInput.readLine()) != null) {
-				lines.add(thisLine);
+			try (final BufferedReader myInput = new BufferedReader(new InputStreamReader(new FileInputStream(filename), Charset.forName("Cp1252")));) {
+				while ((thisLine = myInput.readLine()) != null) {
+					lines.add(thisLine);
+				}
 			}
-			myInput.close();
-			fin.close();
 			return lines.toArray(new String[] {});
 		} catch (final Exception e) {
 			throw new FileIOException("Error reading file: " + filename, e);

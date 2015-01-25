@@ -51,9 +51,6 @@ public class Expand extends ExpandBarBrick {
 				final MainFrame frame = (MainFrame) Expand.this.getDesignatedObject();
 				
 				new ImageBrick(expand, SWT.NONE, ball);
-				new WRSVExpandLabel(expand, "Verbandsadressen", PanelType.WRSV, frame);
-				
-				new ImageBrick(expand, SWT.NONE, ball);
 				new WRSVExpandLabel(expand, "Vereine", PanelType.CLUBS, frame);
 				
 				new ImageBrick(expand, SWT.NONE, ball);
