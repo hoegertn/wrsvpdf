@@ -1,3 +1,6 @@
+[build:2.8.0_2015_05_25]
+- removed wrsv.ini
+
 [build:2.7.0_2014_07_06]
 - Version auf Berichtsbogen
 - Spieltagende auf Ergebnisbogen

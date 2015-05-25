@@ -62,7 +62,5 @@ public interface Configuration {
 	public final static String REPORT_SPIELTAG = Configuration.REPORT_DIRECTORY + File.separatorChar + "spieltag";
 	/**  */
 	public final static String REPORT_TEAM = Configuration.REPORT_DIRECTORY + File.separatorChar + "teamlist";
-	/**  */
-	public final static String REPORT_WRSV = Configuration.REPORT_DIRECTORY + File.separatorChar + "wrsv";
 	
 }
