@@ -180,7 +180,7 @@
 		</copy>
 		<copy todir="${package}">
 			<fileset dir="${basedir}/config" includes="**.*" excludes="MANIFEST.MF" />
-			<fileset dir="${basedir}/config" includes="jre7/**/**.*" />
+			<fileset dir="${basedir}/config" includes="jre8/**/**.*" />
 		</copy>
 		<copy todir="${package}/lib">
 			<fileset dir="${basedir}/lib" includes="**.*" />
