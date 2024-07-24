@@ -3,7 +3,7 @@
 
 	<property file="${basedir}/ant/version.properties" />
 	
-	<property name="target" value="../../~wrsvpdf" />
+	<property name="target" value="build/" />
 	<property name="loggingInstall" value="C:/DevelopmentTools/commons-logging-1.1.1" />
 	<property name="package" value="${target}/package" />
 
@@ -60,7 +60,7 @@
 				<arg value="log" />
 				<arg value="-n" />
 				<arg value="1" />
-				<arg value="--pretty=&quot;&lt;rev&gt;%h&lt;/rev&gt;&quot;" />
+				<arg value="--pretty=&lt;rev&gt;%h&lt;/rev&gt;" />
 			</exec>
 			<xmlproperty file="~getbuildnr.xml" collapseAttributes="true" />
 			<property name="@{buildnrproperty}" value="${rev}" />
@@ -82,7 +82,7 @@
 		<mkdir dir="${package}/images" />
 		<mkdir dir="${package}/reports" />
 
-		<record name="c:/Builds/wrsv_build.log" />
+		<record name="wrsv_build.log" />
 
 	</target>
 

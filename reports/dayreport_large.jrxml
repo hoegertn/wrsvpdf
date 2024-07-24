@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dayreport" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="20" bottomMargin="20" isSummaryNewPage="true">
+<!-- Created with Jaspersoft Studio version 6.0.3.final using JasperReports Library version 6.0.3  -->
+<!-- 2017-07-24T10:18:02 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dayreport" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="ef729d77-72b1-44bc-a853-2a5e56193e59">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<property name="ireport.zoom" value="1.0"/>
@@ -27,7 +29,7 @@
 	<title>
 		<band splitType="Stretch">
 			<frame>
-				<reportElement key="frame-1" x="-16" y="-267" width="0" height="0"/>
+				<reportElement key="frame-1" x="-16" y="-267" width="0" height="0" uuid="c23d8a06-aed3-4f28-aee2-49e8461f3bde"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -40,17 +42,17 @@
 	<pageHeader>
 		<band height="62" splitType="Stretch">
 			<image>
-				<reportElement key="image-1" x="2" y="0" width="50" height="50"/>
+				<reportElement key="image-1" x="2" y="0" width="50" height="50" uuid="9b69076d-4318-408f-82e3-3eac47f211fb"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression class="java.lang.String"><![CDATA["images/brv.gif"]]></imageExpression>
+				<imageExpression><![CDATA["images/brv.gif"]]></imageExpression>
 			</image>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-1" x="117" y="16" width="303" height="16"/>
+				<reportElement key="textField-1" x="117" y="16" width="303" height="16" uuid="1cc03467-a00a-4cb7-8006-4f80dc7bb19b"/>
 				<box>
 					<pen lineWidth="0.0"/>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -61,30 +63,30 @@
 				<textElement textAlignment="Center">
 					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
 			</textField>
 			<image>
-				<reportElement key="image-2" x="58" y="0" width="50" height="50"/>
+				<reportElement key="image-2" x="58" y="0" width="50" height="50" uuid="487285bf-6a88-41b8-9fc5-a7281d4289ce"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression class="java.lang.String"><![CDATA["images/ssb.gif"]]></imageExpression>
+				<imageExpression><![CDATA["images/ssb.gif"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement key="image-3" x="488" y="0" width="25" height="50"/>
+				<reportElement key="image-3" x="488" y="0" width="25" height="50" uuid="f493b738-0ec1-4e02-baaf-42474864339e"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression class="java.lang.String"><![CDATA["images/wrsv.gif"]]></imageExpression>
+				<imageExpression><![CDATA["images/wrsv.gif"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement key="staticText-1" x="117" y="0" width="303" height="16"/>
+				<reportElement key="staticText-1" x="117" y="0" width="303" height="16" uuid="bd1f3fa8-a40c-43aa-af80-aebfdde8467a"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -97,7 +99,7 @@
 				<text><![CDATA[Spielgemeinschaft Baden und Württemberg]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-2" x="117" y="32" width="303" height="16"/>
+				<reportElement key="textField-2" x="117" y="32" width="303" height="16" uuid="180d4d88-3be8-4f51-b525-83cf0b033843"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -107,14 +109,14 @@
 				<textElement textAlignment="Center">
 					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{staffelname}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{staffelname}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="46" splitType="Stretch">
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-10" x="0" y="0" width="460" height="18"/>
+				<reportElement key="textField-10" x="0" y="0" width="460" height="18" uuid="2af67cad-18be-423f-b327-2b3ec3025d95"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -124,10 +126,10 @@
 				<textElement>
 					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Berichtsbogen " + $P{header} + " in " + $P{ort}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Berichtsbogen " + $P{header} + " in " + $P{ort}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-5" x="0" y="23" width="108" height="12"/>
+				<reportElement key="staticText-5" x="0" y="23" width="108" height="12" uuid="10119e98-2747-4871-bd36-f5a5882a0ae7"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -140,7 +142,7 @@
 				<text><![CDATA[Teilnehmende Mannschaften:]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-22" x="0" y="35" width="131" height="11"/>
+				<reportElement key="textField-22" x="0" y="35" width="131" height="11" uuid="ce4912fe-0e1f-469f-a429-3aa0e500603a"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -150,10 +152,10 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Mannschaft"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Mannschaft"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-23" x="131" y="35" width="137" height="11"/>
+				<reportElement key="textField-23" x="131" y="35" width="137" height="11" uuid="fbf16b23-e4d5-4a04-b221-52e6e956a916"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -163,10 +165,13 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Spielername"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Spielername"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-24" x="268" y="35" width="96" height="11"/>
+				<reportElement key="textField-24" x="268" y="35" width="80" height="11" uuid="dce355a2-c5a0-42af-96c5-f5b336c502c0">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -176,10 +181,15 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Geburtsdatum"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Geburtsdatum"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-25" x="364" y="35" width="96" height="11"/>
+				<reportElement key="textField-25" x="348" y="35" width="112" height="11" uuid="fe22bd5a-e6f7-4c19-a7d3-f248b29be45c">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -189,14 +199,14 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Lizenznummer"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["UCI ID"]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="39" splitType="Stretch">
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-4" x="0" y="1" width="131" height="38"/>
+				<reportElement key="textField-4" x="0" y="1" width="131" height="38" uuid="56f5fdc3-8d2e-43cf-a0e7-559653877a54"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -206,10 +216,10 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{teamname}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{teamname}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-5" x="131" y="1" width="137" height="19"/>
+				<reportElement key="textField-5" x="131" y="1" width="137" height="19" uuid="a1888e5e-24b2-4e79-b276-2902ded5fcc3"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -219,10 +229,10 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{player1}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{player1}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-6" x="131" y="20" width="137" height="19"/>
+				<reportElement key="textField-6" x="131" y="20" width="137" height="19" uuid="74a9532e-e7f6-4f4f-be33-79f096f200a1"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -232,10 +242,13 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{player2}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{player2}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-59" x="268" y="1" width="96" height="19"/>
+				<reportElement key="staticText-59" x="268" y="1" width="80" height="19" uuid="16186dbb-0290-4ebc-9b42-d3d36a819186">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -248,7 +261,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-60" x="364" y="1" width="96" height="19"/>
+				<reportElement key="staticText-60" x="348" y="1" width="112" height="19" uuid="188e513d-58ba-4863-a628-3b0d12612195">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -261,7 +279,10 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-61" x="268" y="20" width="96" height="19"/>
+				<reportElement key="staticText-61" x="268" y="20" width="80" height="19" uuid="b8778f27-d2c3-44d7-8e99-8a3ba220fa76">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -274,7 +295,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-62" x="364" y="20" width="96" height="19"/>
+				<reportElement key="staticText-62" x="348" y="20" width="112" height="19" uuid="9008a3a4-6a97-4c57-a9c9-61408f4dc8a6">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -291,7 +317,7 @@
 	<columnFooter>
 		<band height="251" splitType="Stretch">
 			<staticText>
-				<reportElement key="staticText-6" x="0" y="8" width="52" height="12"/>
+				<reportElement key="staticText-6" x="0" y="8" width="52" height="12" uuid="bae3e3c4-0bb1-437a-b019-2c70357e1f54"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -304,7 +330,7 @@
 				<text><![CDATA[Ersatzspieler:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-7" x="0" y="141" width="103" height="12"/>
+				<reportElement key="staticText-7" x="0" y="141" width="103" height="12" uuid="7f3daac0-777f-4224-b9d7-8a020648e1df"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -317,7 +343,7 @@
 				<text><![CDATA[Fehlende Mannschaften:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-18" x="209" y="153" width="59" height="19"/>
+				<reportElement key="staticText-18" x="209" y="153" width="59" height="19" uuid="f8c8516f-e8f5-47d5-9c99-6f4dcff07a86"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -330,7 +356,7 @@
 				<text><![CDATA[Chiefkommissär]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-19" x="268" y="153" width="192" height="19"/>
+				<reportElement key="staticText-19" x="268" y="153" width="192" height="19" uuid="23f93f33-5631-443b-a802-3865192bef2c"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -343,7 +369,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-21" x="209" y="172" width="59" height="19"/>
+				<reportElement key="staticText-21" x="209" y="172" width="59" height="19" uuid="b6e2eaec-b949-424a-84bf-e4cd9a0d6040"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -356,7 +382,7 @@
 				<text><![CDATA[Kommissär]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-22" x="268" y="172" width="192" height="19"/>
+				<reportElement key="staticText-22" x="268" y="172" width="192" height="19" uuid="bdbaa0c0-25c8-4bf9-8dda-4c0d23f9f509"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -369,7 +395,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-24" x="209" y="191" width="59" height="19"/>
+				<reportElement key="staticText-24" x="209" y="191" width="59" height="19" uuid="a0aaf1cc-d43a-4059-ad1e-8977632ee009"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -382,7 +408,7 @@
 				<text><![CDATA[Kommissär]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-25" x="268" y="191" width="192" height="19"/>
+				<reportElement key="staticText-25" x="268" y="191" width="192" height="19" uuid="f22f8606-3426-44ea-a7f8-9fbad3f89fbf"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -395,7 +421,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-29" x="209" y="210" width="59" height="19"/>
+				<reportElement key="staticText-29" x="209" y="210" width="59" height="19" uuid="cdda6dc3-add2-431e-a93a-39e5dac00656"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -408,7 +434,7 @@
 				<text><![CDATA[Kampfrichter]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-30" x="268" y="210" width="192" height="19"/>
+				<reportElement key="staticText-30" x="268" y="210" width="192" height="19" uuid="097fad2e-8562-4a1f-bc82-f6e3e09ad472"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -421,7 +447,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-32" x="209" y="229" width="59" height="19"/>
+				<reportElement key="staticText-32" x="209" y="229" width="59" height="19" uuid="faeeb455-8fdd-4e1d-ac21-555aa4c90adc"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -434,7 +460,7 @@
 				<text><![CDATA[Kampfrichter]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-33" x="268" y="229" width="192" height="19"/>
+				<reportElement key="staticText-33" x="268" y="229" width="192" height="19" uuid="75ec5bac-4854-4fa0-9b3d-1c57c0529920"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -447,7 +473,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-35" x="0" y="31" width="131" height="19"/>
+				<reportElement key="staticText-35" x="0" y="31" width="131" height="19" uuid="16394019-788b-428b-9800-1d1b04761324"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -460,7 +486,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-36" x="131" y="31" width="137" height="19"/>
+				<reportElement key="staticText-36" x="131" y="31" width="137" height="19" uuid="1622f643-a1c6-465c-a83e-1395ed5568d6"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -473,7 +499,10 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-37" x="268" y="31" width="96" height="19"/>
+				<reportElement key="staticText-37" x="268" y="31" width="80" height="19" uuid="0ee7d6d0-02af-4c1e-a80c-5f045251fbd2">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -486,7 +515,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-38" x="364" y="31" width="96" height="19"/>
+				<reportElement key="staticText-38" x="348" y="31" width="112" height="19" uuid="fd54b484-e415-45f7-85d9-c7f7b369989c">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -499,7 +533,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-39" x="0" y="50" width="131" height="19"/>
+				<reportElement key="staticText-39" x="0" y="50" width="131" height="19" uuid="a1f2f6b8-8492-423f-ba69-1500c685898d"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -512,7 +546,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-40" x="131" y="50" width="137" height="19"/>
+				<reportElement key="staticText-40" x="131" y="50" width="137" height="19" uuid="bc048704-d188-4af2-970f-29ac272617fb"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -525,7 +559,10 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-41" x="268" y="50" width="96" height="19"/>
+				<reportElement key="staticText-41" x="268" y="50" width="80" height="19" uuid="3174d839-8d7a-4b40-aade-701d63fffbf6">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -538,7 +575,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-42" x="364" y="50" width="96" height="19"/>
+				<reportElement key="staticText-42" x="348" y="50" width="112" height="19" uuid="bb6acf81-832e-40de-8a82-7852e18230f6">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -551,7 +593,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-43" x="0" y="69" width="131" height="19"/>
+				<reportElement key="staticText-43" x="0" y="69" width="131" height="19" uuid="e7032ef2-7a32-4a95-99ac-0294c752aa8b"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -564,7 +606,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-44" x="131" y="69" width="137" height="19"/>
+				<reportElement key="staticText-44" x="131" y="69" width="137" height="19" uuid="a8e0a094-0a20-48a4-b298-058908374593"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -577,7 +619,10 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-45" x="268" y="69" width="96" height="19"/>
+				<reportElement key="staticText-45" x="268" y="69" width="80" height="19" uuid="8eb6f06a-6262-42a2-b312-f8ebe7d3c47f">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -590,7 +635,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-46" x="364" y="69" width="96" height="19"/>
+				<reportElement key="staticText-46" x="348" y="69" width="112" height="19" uuid="4185ee5b-e653-429b-87ae-0c8b6ac0a9d8">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -603,7 +653,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-47" x="0" y="88" width="131" height="19"/>
+				<reportElement key="staticText-47" x="0" y="88" width="131" height="19" uuid="13756d4b-6f6b-4152-a787-578ebf62a468"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -616,7 +666,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-48" x="131" y="88" width="137" height="19"/>
+				<reportElement key="staticText-48" x="131" y="88" width="137" height="19" uuid="5e973426-c973-486b-b158-3a5ebdeab385"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -629,7 +679,10 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-49" x="268" y="88" width="96" height="19"/>
+				<reportElement key="staticText-49" x="268" y="88" width="80" height="19" uuid="e7862970-82f1-49ce-b4a1-04fa9e2f66c9">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -642,7 +695,12 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-50" x="364" y="88" width="96" height="19"/>
+				<reportElement key="staticText-50" x="348" y="88" width="112" height="19" uuid="2480fb14-c540-4384-aedc-f763e7de691c">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -655,7 +713,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-51" x="0" y="153" width="131" height="19"/>
+				<reportElement key="staticText-51" x="0" y="153" width="131" height="19" uuid="5ab4836e-cd59-469d-9a56-d8b59d1d6bc3"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -668,7 +726,7 @@
 				<text><![CDATA[Mannschaftsname]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-52" x="131" y="153" width="47" height="19"/>
+				<reportElement key="staticText-52" x="131" y="153" width="47" height="19" uuid="5991bd73-9731-449e-a193-d56a90596dae"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -681,7 +739,7 @@
 				<text><![CDATA[entschuldigt]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-53" x="0" y="172" width="131" height="19"/>
+				<reportElement key="staticText-53" x="0" y="172" width="131" height="19" uuid="ebc71e14-0596-4fb3-a001-f19324a91607"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -694,7 +752,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-54" x="131" y="172" width="47" height="19"/>
+				<reportElement key="staticText-54" x="131" y="172" width="47" height="19" uuid="9af7f450-6f78-4083-b444-8b92db829c0c"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -707,7 +765,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-55" x="0" y="191" width="131" height="19"/>
+				<reportElement key="staticText-55" x="0" y="191" width="131" height="19" uuid="17659f56-59b4-47e5-bfcb-aa367e57fc2c"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -720,7 +778,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-56" x="131" y="191" width="47" height="19"/>
+				<reportElement key="staticText-56" x="131" y="191" width="47" height="19" uuid="150297af-b8c5-4d3f-a0a3-89b8a1af9606"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -733,7 +791,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-57" x="0" y="210" width="131" height="19"/>
+				<reportElement key="staticText-57" x="0" y="210" width="131" height="19" uuid="5f076aa5-5ffc-4a15-a9a2-ba0f15557d7e"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -746,7 +804,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-58" x="131" y="210" width="47" height="19"/>
+				<reportElement key="staticText-58" x="131" y="210" width="47" height="19" uuid="66ce37ab-3ab4-48e1-bf8d-9d999718d702"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -759,7 +817,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-26" x="0" y="237" width="200" height="12"/>
+				<reportElement key="textField-26" x="0" y="237" width="200" height="12" uuid="9e0db5e2-4377-42c8-9e3b-f9021c3482f6"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -772,7 +830,7 @@
 				<textFieldExpression><![CDATA["Erstellt: " + $P{datetime} + " / " + $P{writerVersion}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-27" x="0" y="20" width="131" height="11"/>
+				<reportElement key="textField-27" x="0" y="20" width="131" height="11" uuid="102eea79-329b-42f8-a006-085ece7f785d"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -782,10 +840,10 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Mannschaft"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Mannschaft"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-28" x="131" y="20" width="137" height="11"/>
+				<reportElement key="textField-28" x="131" y="20" width="137" height="11" uuid="1039423b-d8f5-48e2-a1c3-25f22ad10b40"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -795,10 +853,13 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Spielername"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Spielername"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-29" x="268" y="20" width="96" height="11"/>
+				<reportElement key="textField-29" x="268" y="20" width="80" height="11" uuid="f47a5007-7a96-49e3-9583-2d403dc79c4d">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -808,10 +869,15 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Geburtsdatum"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Geburtsdatum"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-30" x="364" y="20" width="96" height="11"/>
+				<reportElement key="textField-30" x="348" y="20" width="112" height="11" uuid="a4fe37df-fd43-4b6f-af01-2f1070a5f1ad">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -821,10 +887,10 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Lizenznummer"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["UCI ID"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-113" x="0" y="114" width="268" height="17"/>
+				<reportElement key="staticText-113" x="0" y="114" width="268" height="17" uuid="9a404adb-f29f-42ab-a671-5e1b5f35b544"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -844,7 +910,7 @@
 	<summary>
 		<band height="651" splitType="Stretch">
 			<staticText>
-				<reportElement key="staticText-63" x="0" y="107" width="98" height="12"/>
+				<reportElement key="staticText-63" x="0" y="107" width="98" height="12" uuid="0e032aff-fe3a-4554-b272-242013590d3c"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -857,7 +923,7 @@
 				<text><![CDATA[Besondere Vorkommnisse:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-65" x="0" y="119" width="511" height="25"/>
+				<reportElement key="staticText-65" x="0" y="119" width="511" height="25" uuid="80ab7352-d07f-4386-8a7a-a4dcf9778484"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -870,7 +936,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-66" x="0" y="144" width="511" height="25"/>
+				<reportElement key="staticText-66" x="0" y="144" width="511" height="25" uuid="55a94119-e8b3-4498-9f97-cf0caecf3e6b"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -883,7 +949,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-67" x="0" y="169" width="511" height="25"/>
+				<reportElement key="staticText-67" x="0" y="169" width="511" height="25" uuid="d1a684aa-ca56-4294-8871-9d086968579b"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -896,7 +962,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-68" x="0" y="194" width="511" height="25"/>
+				<reportElement key="staticText-68" x="0" y="194" width="511" height="25" uuid="690604da-510e-412e-a0a9-ee15bada3293"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -909,7 +975,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-69" x="0" y="219" width="511" height="25"/>
+				<reportElement key="staticText-69" x="0" y="219" width="511" height="25" uuid="020313b7-7820-4bd8-93b8-2da5571b5991"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -922,7 +988,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-70" x="0" y="244" width="511" height="25"/>
+				<reportElement key="staticText-70" x="0" y="244" width="511" height="25" uuid="aca4a2ee-15d3-40e0-ada5-c1a650ef79a5"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -935,7 +1001,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-71" x="0" y="269" width="511" height="25"/>
+				<reportElement key="staticText-71" x="0" y="269" width="511" height="25" uuid="ad74ca6b-b508-4124-aefb-e57f901bea38"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -948,7 +1014,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-72" x="0" y="294" width="511" height="25"/>
+				<reportElement key="staticText-72" x="0" y="294" width="511" height="25" uuid="4a4279d4-8edf-4d44-a930-4c670b2ca63a"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -961,7 +1027,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-73" x="0" y="319" width="511" height="25"/>
+				<reportElement key="staticText-73" x="0" y="319" width="511" height="25" uuid="196889fc-93fa-4fa6-a0a9-73f53cbc2824"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -974,7 +1040,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-74" x="0" y="344" width="511" height="25"/>
+				<reportElement key="staticText-74" x="0" y="344" width="511" height="25" uuid="851472c0-ec1a-4fff-9e52-994033aa6609"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -987,7 +1053,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-75" x="0" y="369" width="511" height="25"/>
+				<reportElement key="staticText-75" x="0" y="369" width="511" height="25" uuid="89399b8a-588c-4db1-bab8-34df5831a2c1"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1000,7 +1066,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-76" x="0" y="394" width="511" height="25"/>
+				<reportElement key="staticText-76" x="0" y="394" width="511" height="25" uuid="4697421d-5910-4a1a-af4a-6a29ed40a3a1"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1013,7 +1079,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-77" x="0" y="419" width="511" height="25"/>
+				<reportElement key="staticText-77" x="0" y="419" width="511" height="25" uuid="a23f11b9-2a1b-4c50-bd42-f4deaba682dc"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1026,7 +1092,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-78" x="0" y="444" width="511" height="25"/>
+				<reportElement key="staticText-78" x="0" y="444" width="511" height="25" uuid="da606df6-83c6-461c-9c02-807d69a5e6ae"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1039,7 +1105,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-79" x="0" y="469" width="511" height="25"/>
+				<reportElement key="staticText-79" x="0" y="469" width="511" height="25" uuid="28e5f15a-f1ed-4ba4-8cac-978e2bb85d90"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1052,7 +1118,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-80" x="0" y="494" width="511" height="25"/>
+				<reportElement key="staticText-80" x="0" y="494" width="511" height="25" uuid="84efc90d-c407-4199-8b9d-d97fd5f8b5c1"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1065,7 +1131,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-81" x="0" y="519" width="511" height="25"/>
+				<reportElement key="staticText-81" x="0" y="519" width="511" height="25" uuid="077f1c28-f2ec-4334-bdc6-1ae76ca53205"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1078,7 +1144,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-31" x="260" y="634" width="230" height="12"/>
+				<reportElement key="textField-31" x="260" y="634" width="230" height="12" uuid="145d75bd-ec23-4e2c-956b-c2d3cae430e6"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1088,40 +1154,40 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Erstellt: " + $P{datetime} + " / " + $P{writerVersion}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Erstellt: " + $P{datetime} + " / " + $P{writerVersion}]]></textFieldExpression>
 			</textField>
 			<image>
-				<reportElement key="image-4" x="0" y="0" width="70" height="70"/>
+				<reportElement key="image-4" x="0" y="0" width="70" height="70" uuid="b0d0c92c-c78c-4b5d-a97c-aa9999fe9fc6"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression class="java.lang.String"><![CDATA["images/brv.gif"]]></imageExpression>
+				<imageExpression><![CDATA["images/brv.gif"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement key="image-5" x="80" y="0" width="70" height="70"/>
+				<reportElement key="image-5" x="80" y="0" width="70" height="70" uuid="37356feb-b929-407d-8edb-335090078332"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression class="java.lang.String"><![CDATA["images/ssb.gif"]]></imageExpression>
+				<imageExpression><![CDATA["images/ssb.gif"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement key="image-6" x="476" y="0" width="35" height="70"/>
+				<reportElement key="image-6" x="476" y="0" width="35" height="70" uuid="d876e313-2247-44c2-9c51-28ffb37edf82"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression class="java.lang.String"><![CDATA["images/wrsv.gif"]]></imageExpression>
+				<imageExpression><![CDATA["images/wrsv.gif"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement key="staticText-101" x="187" y="0" width="200" height="16"/>
+				<reportElement key="staticText-101" x="187" y="0" width="200" height="16" uuid="7ed86897-7c44-4982-9649-3f522377eebe"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1134,7 +1200,7 @@
 				<text><![CDATA[Spielgemeinschaft]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-102" x="187" y="16" width="200" height="16"/>
+				<reportElement key="staticText-102" x="187" y="16" width="200" height="16" uuid="0414e37e-0599-45d1-8289-b62e0ffc70f0"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1147,7 +1213,7 @@
 				<text><![CDATA[Baden und Württemberg]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-32" x="187" y="38" width="200" height="16"/>
+				<reportElement key="textField-32" x="187" y="38" width="200" height="16" uuid="efd79887-d517-4e5a-b7d6-86e57afa3639"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1157,10 +1223,10 @@
 				<textElement textAlignment="Center">
 					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-33" x="187" y="54" width="200" height="16"/>
+				<reportElement key="textField-33" x="187" y="54" width="200" height="16" uuid="67acdb7a-163d-4223-9558-a62c15c00700"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1170,10 +1236,10 @@
 				<textElement textAlignment="Center">
 					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{staffelname}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{staffelname}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-103" x="0" y="589" width="59" height="19"/>
+				<reportElement key="staticText-103" x="0" y="589" width="59" height="19" uuid="6ce2d9e7-39ad-42ae-8951-d21123ec196d"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1186,7 +1252,7 @@
 				<text><![CDATA[Chiefkommissär]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-104" x="59" y="589" width="192" height="19"/>
+				<reportElement key="staticText-104" x="59" y="589" width="192" height="19" uuid="1b11cd37-a730-45d2-8b61-867267802471"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1199,7 +1265,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-105" x="0" y="608" width="59" height="19"/>
+				<reportElement key="staticText-105" x="0" y="608" width="59" height="19" uuid="98bcfc60-6ad2-4d2d-aad2-a49adec6ce62"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1212,7 +1278,7 @@
 				<text><![CDATA[Kommissär]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-106" x="59" y="608" width="192" height="19"/>
+				<reportElement key="staticText-106" x="59" y="608" width="192" height="19" uuid="02e13048-2a3f-4c10-84c8-32f0b8b03b8f"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1225,7 +1291,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-107" x="0" y="627" width="59" height="19"/>
+				<reportElement key="staticText-107" x="0" y="627" width="59" height="19" uuid="309abc26-03d9-45f0-a600-e7f02bfae85c"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1238,7 +1304,7 @@
 				<text><![CDATA[Kommissär]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-108" x="59" y="627" width="192" height="19"/>
+				<reportElement key="staticText-108" x="59" y="627" width="192" height="19" uuid="90e118ac-c098-4c49-b338-49686171e04f"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1251,7 +1317,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-109" x="260" y="589" width="59" height="19"/>
+				<reportElement key="staticText-109" x="260" y="589" width="59" height="19" uuid="4640cc09-4050-4c82-94a7-cf03fd0b5e7f"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1264,7 +1330,7 @@
 				<text><![CDATA[Kampfrichter]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-110" x="319" y="589" width="192" height="19"/>
+				<reportElement key="staticText-110" x="319" y="589" width="192" height="19" uuid="55d76264-5154-4bbb-ba89-3b1a0564796b"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1277,7 +1343,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-111" x="260" y="608" width="59" height="19"/>
+				<reportElement key="staticText-111" x="260" y="608" width="59" height="19" uuid="02ee29e9-75e9-4f5e-8601-259a972bea9f"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1290,7 +1356,7 @@
 				<text><![CDATA[Kampfrichter]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-112" x="319" y="608" width="192" height="19"/>
+				<reportElement key="staticText-112" x="319" y="608" width="192" height="19" uuid="44576b76-efc9-40d8-ac4d-e7bded0c4c63"/>
 				<box>
 					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1303,7 +1369,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-116" x="0" y="569" width="70" height="12"/>
+				<reportElement key="staticText-116" x="0" y="569" width="70" height="12" uuid="7a152a8f-5a83-45e5-b947-4c566c667de7"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1316,7 +1382,7 @@
 				<text><![CDATA[Elektronisch  an:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-117" x="70" y="569" width="441" height="12"/>
+				<reportElement key="staticText-117" x="70" y="569" width="441" height="12" uuid="144996f1-1a72-4380-ae51-123ed225911d"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1329,7 +1395,7 @@
 				<text><![CDATA[Fachwart Radball WRSV, Staffelleiter, Kommisärsobmann, Internetbeauftragter, Ergebnisdienst BRV, Jugendreferent]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-34" x="0" y="84" width="460" height="18"/>
+				<reportElement key="textField-34" x="0" y="84" width="460" height="18" uuid="8c9cd417-1b54-46e6-a5ec-f405322a8851"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1339,7 +1405,7 @@
 				<textElement>
 					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA["Berichtsbogen " + $P{header} + " in " + $P{ort}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Berichtsbogen " + $P{header} + " in " + $P{ort}]]></textFieldExpression>
 			</textField>
 		</band>
 	</summary>
