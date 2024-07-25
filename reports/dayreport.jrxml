@@ -1325,7 +1325,7 @@
 				<textElement>
 					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Elektronisch  an:]]></text>
+				<text><![CDATA[Per E-Mail an:]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-117" x="70" y="569" width="441" height="12"/>
@@ -1338,7 +1338,7 @@
 				<textElement>
 					<font size="8" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
-				<text><![CDATA[Fachwart Radball WRSV, Staffelleiter, Kommisärsobmann, Internetbeauftragter, Ergebnisdienst BRV, Jugendreferent]]></text>
+				<text><![CDATA[Staffelleiter und Ergebnisdienst (ergebnisse@radball-in-baden.de)]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-34" x="0" y="84" width="460" height="18"/>
