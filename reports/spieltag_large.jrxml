@@ -495,7 +495,7 @@
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[In Klammern bitte Name in Blockschrift hinzufügen]]></text>
+				<text><![CDATA[In Klammern bitte Vor- und Nachname in Blockschrift hinzufügen]]></text>
 			</staticText>
 		</band>
 	</lastPageFooter>
